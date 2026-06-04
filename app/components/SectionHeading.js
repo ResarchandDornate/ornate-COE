@@ -5,12 +5,12 @@ export default function SectionHeading({ eyebrow, title, subtitle, light = false
   return (
     <Reveal className="mx-auto max-w-3xl text-center">
       {eyebrow && (
-        <span className="inline-block rounded-full bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-dark">
+        <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-brand-dark sm:px-4 sm:text-xs">
           {eyebrow}
         </span>
       )}
       <h2
-        className={`mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl ${
+        className={`mt-3 font-display text-xl font-bold tracking-tight sm:mt-4 sm:text-3xl lg:text-4xl ${
           light ? "text-white" : "text-navy-800"
         }`}
       >
@@ -18,7 +18,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, light = false
       </h2>
       {subtitle && (
         <p
-          className={`mt-4 text-base leading-relaxed sm:text-lg ${
+          className={`mt-2.5 text-sm leading-relaxed sm:mt-4 sm:text-base lg:text-lg ${
             light ? "text-slate-300" : "text-slate-600"
           }`}
         >

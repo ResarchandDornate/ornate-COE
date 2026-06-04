@@ -16,7 +16,7 @@ const DOT = {
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="bg-slate-50 py-24 sm:py-28">
+    <section id="roadmap" className="bg-slate-50 py-16 sm:py-28">
       <div className="mx-auto max-w-5xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Development Roadmap"
@@ -59,10 +59,10 @@ export default function Roadmap() {
                           {item.state}
                         </span>
                       </div>
-                      <h3 className="font-display text-lg font-bold text-navy-800">
+                      <h3 className="font-display text-base font-bold text-navy-800 sm:text-lg">
                         {item.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                      <p className="mt-2 text-[13px] leading-relaxed text-slate-600 sm:text-sm">
                         {item.body}
                       </p>
                     </div>

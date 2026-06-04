@@ -37,7 +37,7 @@ function Icon({ name }) {
 
 export default function Partners() {
   return (
-    <section id="partners" className="bg-slate-50 py-24 sm:py-28">
+    <section id="partners" className="bg-slate-50 py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Partnerships & Recognition"
@@ -45,20 +45,20 @@ export default function Partners() {
           subtitle="Bridging academia, government and industry to bring indigenous power electronics from the lab to the field."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 md:grid-cols-2">
           {PILLARS.map((p, i) => (
             <Reveal key={p.title} delay={i * 120}>
-              <div className="group h-full rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 text-accent-dark transition-colors group-hover:bg-accent group-hover:text-white">
+              <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl sm:rounded-3xl sm:p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent-dark transition-colors group-hover:bg-accent group-hover:text-white sm:h-14 sm:w-14 sm:rounded-2xl">
                   <Icon name={p.icon} />
                 </div>
-                <span className="mt-6 inline-block text-xs font-semibold uppercase tracking-widest text-brand-dark">
+                <span className="mt-5 inline-block text-[10px] font-semibold uppercase tracking-widest text-brand-dark sm:mt-6 sm:text-xs">
                   {p.tag}
                 </span>
-                <h3 className="mt-2 font-display text-xl font-bold text-navy-800">
+                <h3 className="mt-2 font-display text-lg font-bold text-navy-800 sm:text-xl">
                   {p.title}
                 </h3>
-                <p className="mt-3 leading-relaxed text-slate-600">{p.body}</p>
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-600 sm:mt-3 sm:text-base">{p.body}</p>
               </div>
             </Reveal>
           ))}

@@ -23,7 +23,7 @@ function MissionIcon() {
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-slate-50 py-24 sm:py-28">
+    <section id="about" className="relative bg-slate-50 py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Who We Are"
@@ -31,28 +31,28 @@ export default function About() {
           subtitle="The Centre of Excellence researches, designs, prototypes and commercializes advanced power electronics and clean energy systems — all engineered in-house in India."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 md:grid-cols-2">
           <Reveal delay={0}>
-            <div className="group h-full rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-xl hover:shadow-brand/5">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand-dark transition-colors group-hover:bg-brand group-hover:text-navy">
+            <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-xl hover:shadow-brand/5 sm:rounded-3xl sm:p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand-dark transition-colors group-hover:bg-brand group-hover:text-navy sm:h-14 sm:w-14 sm:rounded-2xl">
                 <VisionIcon />
               </div>
-              <h3 className="mt-6 font-display text-2xl font-bold text-navy-800">
+              <h3 className="mt-5 font-display text-xl font-bold text-navy-800 sm:mt-6 sm:text-2xl">
                 Vision
               </h3>
-              <p className="mt-3 leading-relaxed text-slate-600">{VISION}</p>
+              <p className="mt-2.5 text-sm leading-relaxed text-slate-600 sm:mt-3 sm:text-base">{VISION}</p>
             </div>
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="group h-full rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 text-accent-dark transition-colors group-hover:bg-accent group-hover:text-white">
+            <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5 sm:rounded-3xl sm:p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent-dark transition-colors group-hover:bg-accent group-hover:text-white sm:h-14 sm:w-14 sm:rounded-2xl">
                 <MissionIcon />
               </div>
-              <h3 className="mt-6 font-display text-2xl font-bold text-navy-800">
+              <h3 className="mt-5 font-display text-xl font-bold text-navy-800 sm:mt-6 sm:text-2xl">
                 Mission
               </h3>
-              <p className="mt-3 leading-relaxed text-slate-600">{MISSION}</p>
+              <p className="mt-2.5 text-sm leading-relaxed text-slate-600 sm:mt-3 sm:text-base">{MISSION}</p>
             </div>
           </Reveal>
         </div>

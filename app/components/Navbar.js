@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "../data";
 
@@ -18,21 +19,26 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-navy/90 backdrop-blur-md shadow-lg shadow-black/20"
+          ? "bg-[#fbfaf8]/90 backdrop-blur-md shadow-lg shadow-slate-900/5"
           : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <a href="#home" className="flex items-center gap-3 group">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-accent font-display text-lg font-bold text-navy shadow-lg shadow-brand/30">
-            CoE
-          </span>
-          <span className="hidden flex-col leading-tight sm:flex">
-            <span className="font-display text-sm font-bold tracking-wide text-white">
+        <a href="#home" className="group flex items-center gap-3">
+          <Image
+            src="/ornateLogo.png"
+            alt="Ornate Solar"
+            width={132}
+            height={48}
+            priority
+            className="h-7 w-auto transition-transform group-hover:scale-105 sm:h-9"
+          />
+          <span className="hidden flex-col border-l border-slate-300 pl-3 leading-tight sm:flex">
+            <span className="font-display text-sm font-bold tracking-wide text-navy-800">
               B.K. Bhattacharyya CoE
             </span>
-            <span className="text-[11px] font-medium text-brand">
-              at Ornate Solar
+            <span className="text-[11px] font-medium text-brand-dark">
+              Centre of Excellence
             </span>
           </span>
         </a>
@@ -43,7 +49,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-brand"
+                className="rounded-full px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 hover:text-brand-dark"
               >
                 {link.label}
               </a>
@@ -62,20 +68,20 @@ export default function Navbar() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-white lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-navy-800 lg:hidden"
         >
           <div className="space-y-1.5">
-            <span className={`block h-0.5 w-6 bg-white transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`block h-0.5 w-6 bg-white transition-opacity ${open ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 w-6 bg-white transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-navy-800 transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-navy-800 transition-opacity ${open ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-navy-800 transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`} />
           </div>
         </button>
       </nav>
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden bg-navy-800/95 backdrop-blur-md transition-[max-height] duration-300 lg:hidden ${
-          open ? "max-h-96" : "max-h-0"
+        className={`overflow-hidden border-t border-slate-200 bg-[#fbfaf8]/95 backdrop-blur-md transition-[max-height] duration-300 lg:hidden ${
+          open ? "max-h-112" : "max-h-0"
         }`}
       >
         <ul className="flex flex-col gap-1 px-5 py-4">
@@ -84,7 +90,7 @@ export default function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-4 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/10 hover:text-brand"
+                className="block rounded-lg px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-brand-dark"
               >
                 {link.label}
               </a>

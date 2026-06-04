@@ -17,13 +17,12 @@ export default function Products() {
   const tone = TONE[product.statusTone];
 
   return (
-    <section id="products" className="relative overflow-hidden bg-navy py-24 text-white sm:py-28">
-      <div className="absolute inset-0 grid-bg opacity-30" />
+    <section id="products" className="relative overflow-hidden bg-[#f1f5f9] py-16 text-navy-800 sm:py-28">
+      <div className="absolute inset-0 grid-bg-light opacity-60" />
       <div className="absolute -right-20 top-40 h-80 w-80 rounded-full bg-brand/10 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
-          light
           eyebrow="Products & Technology"
           title="Engineered in-house, end to end"
           subtitle="Every product below is designed, simulated, prototyped and tested entirely in-house through indigenous engineering effort."
@@ -41,8 +40,8 @@ export default function Products() {
                   onClick={() => setActive(p.id)}
                   className={`flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-all ${
                     isActive
-                      ? "border-brand/50 bg-white/10 text-white"
-                      : "border-white/10 bg-white/[0.03] text-slate-300 hover:bg-white/[0.07]"
+                      ? "border-brand/50 bg-white text-navy-800 shadow-sm"
+                      : "border-slate-200 bg-white/60 text-slate-600 hover:bg-white"
                   }`}
                 >
                   <span className={`h-2 w-2 rounded-full ${t.dot}`} />
@@ -55,33 +54,33 @@ export default function Products() {
 
         {/* Active product card */}
         <Reveal key={product.id} className="mt-10">
-          <div className="grid gap-8 rounded-3xl border border-white/10 bg-white/[0.03] p-7 backdrop-blur-sm sm:p-10 lg:grid-cols-2">
+          <div className="grid gap-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:gap-8 sm:rounded-3xl sm:p-10 lg:grid-cols-2">
             <div>
-              <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold ${tone.chip}`}>
+              <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-[10px] font-semibold sm:text-xs ${tone.chip}`}>
                 <span className={`h-1.5 w-1.5 rounded-full ${tone.dot}`} />
                 {product.status}
               </span>
-              <h3 className="mt-4 font-display text-2xl font-bold sm:text-3xl">
+              <h3 className="mt-3 font-display text-lg font-bold text-navy-800 sm:mt-4 sm:text-3xl">
                 {product.name}
               </h3>
-              <p className="mt-1 font-display text-sm font-semibold text-brand">
+              <p className="mt-1 font-display text-xs font-semibold text-brand-dark sm:text-sm">
                 {product.series}
               </p>
-              <p className="mt-5 leading-relaxed text-slate-300">
+              <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:mt-5 sm:text-base">
                 {product.blurb}
               </p>
             </div>
 
             {/* Spec table */}
             <div className={`overflow-hidden rounded-2xl ring-1 ${tone.ring}`}>
-              <dl className="divide-y divide-white/5 text-sm">
+              <dl className="divide-y divide-slate-200 text-xs sm:text-sm">
                 {product.specs.map(([k, v]) => (
                   <div
                     key={k}
-                    className="grid grid-cols-2 gap-3 bg-white/[0.02] px-5 py-3 transition-colors hover:bg-white/[0.05]"
+                    className="grid grid-cols-2 gap-3 bg-slate-50 px-4 py-2.5 transition-colors hover:bg-slate-100 sm:px-5 sm:py-3"
                   >
-                    <dt className="font-medium text-slate-400">{k}</dt>
-                    <dd className="text-right font-semibold text-white">{v}</dd>
+                    <dt className="font-medium text-slate-500">{k}</dt>
+                    <dd className="text-right font-semibold text-navy-800">{v}</dd>
                   </div>
                 ))}
               </dl>

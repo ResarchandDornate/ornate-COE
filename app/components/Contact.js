@@ -16,7 +16,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-white py-24 sm:py-28">
+    <section id="contact" className="bg-[#fbfaf8] py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Get in Touch"
@@ -24,45 +24,45 @@ export default function Contact() {
           subtitle="For collaborations, internships, research partnerships or product enquiries — reach out to the Centre of Excellence."
         />
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-5">
+        <div className="mt-10 grid gap-6 sm:mt-14 sm:gap-8 lg:grid-cols-5">
           {/* Info */}
           <Reveal className="lg:col-span-2">
-            <div className="flex h-full flex-col justify-between rounded-3xl bg-navy p-8 text-white">
+            <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-gradient-to-br from-[#fff5f1] to-[#eefaf4] p-6 text-navy-800 shadow-sm sm:rounded-3xl sm:p-8">
               <div>
-                <h3 className="font-display text-xl font-bold">{CONTACT.org}</h3>
-                <p className="mt-1 text-sm font-medium text-brand">
+                <h3 className="font-display text-lg font-bold sm:text-xl">{CONTACT.org}</h3>
+                <p className="mt-1 text-xs font-medium text-brand-dark sm:text-sm">
                   B.K. Bhattacharyya Centre of Excellence
                 </p>
 
                 <dl className="mt-8 space-y-5 text-sm">
                   <div className="flex gap-3">
-                    <span className="mt-0.5 text-brand">📍</span>
+                    <span className="mt-0.5">📍</span>
                     <div>
-                      <dt className="font-semibold text-white">Address</dt>
-                      <dd className="text-slate-300">{CONTACT.address}</dd>
+                      <dt className="font-semibold text-navy-800">Address</dt>
+                      <dd className="text-slate-600">{CONTACT.address}</dd>
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <span className="mt-0.5 text-brand">✉️</span>
+                    <span className="mt-0.5">✉️</span>
                     <div>
-                      <dt className="font-semibold text-white">Email</dt>
-                      <dd className="text-slate-300">
-                        <a href={`mailto:${CONTACT.email}`} className="hover:text-brand">
+                      <dt className="font-semibold text-navy-800">Email</dt>
+                      <dd className="text-slate-600">
+                        <a href={`mailto:${CONTACT.email}`} className="hover:text-brand-dark">
                           {CONTACT.email}
                         </a>
                       </dd>
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <span className="mt-0.5 text-brand">🇮🇳</span>
+                    <span className="mt-0.5">🇮🇳</span>
                     <div>
-                      <dt className="font-semibold text-white">Origin</dt>
-                      <dd className="text-slate-300">{CONTACT.madeIn}</dd>
+                      <dt className="font-semibold text-navy-800">Origin</dt>
+                      <dd className="text-slate-600">{CONTACT.madeIn}</dd>
                     </div>
                   </div>
                 </dl>
               </div>
-              <div className="mt-8 rounded-2xl bg-white/5 p-4 text-xs text-slate-400">
+              <div className="mt-8 rounded-2xl border border-slate-200 bg-white/70 p-4 text-xs text-slate-500">
                 Indigenous Design · Innovation · Excellence
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Contact() {
           <Reveal delay={120} className="lg:col-span-3">
             <form
               onSubmit={handleSubmit}
-              className="rounded-3xl border border-slate-200 bg-slate-50 p-8"
+              className="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:rounded-3xl sm:p-8"
             >
               <div className="grid gap-5 sm:grid-cols-2">
                 <Field label="Full name" name="name" placeholder="Your name" />

@@ -9,9 +9,16 @@ export const NAV_LINKS = [
   { label: "Products", href: "#products" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Team", href: "#team" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Partners", href: "#partners" },
   { label: "Contact", href: "#contact" },
 ];
+
+// Gallery — candid team & lab photos. Files live in /public/team.
+export const GALLERY = Array.from({ length: 16 }, (_, i) => ({
+  src: `/team/gallery-${String(i + 1).padStart(2, "0")}.jpeg`,
+  alt: `B.K. Bhattacharyya Centre of Excellence — team & lab moment ${i + 1}`,
+}));
 
 // Hero animated stat counters
 export const STATS = [
