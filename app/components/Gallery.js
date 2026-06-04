@@ -9,7 +9,7 @@ const ROW_TWO = GALLERY.slice(mid);
 
 function Card({ item }) {
   return (
-    <div className="group relative aspect-[4/3] w-56 shrink-0 overflow-hidden rounded-xl border border-slate-200 bg-slate-100 shadow-md sm:w-72 lg:w-80">
+    <div className="group relative aspect-[4/3] w-56 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-lg sm:w-72 lg:w-80">
       <Image
         src={item.src}
         alt={item.alt}
@@ -17,8 +17,8 @@ function Card({ item }) {
         sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 320px"
         className="object-cover transition-transform duration-500 group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-70" />
-      <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5 transition-colors duration-300 group-hover:ring-brand/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#222d45]/60 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90" />
+      <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10 transition-colors duration-300 group-hover:ring-brand/50" />
     </div>
   );
 }
@@ -44,15 +44,16 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative overflow-hidden bg-[#f1f5f9] py-16 text-navy-800 sm:py-24"
+      className="relative overflow-hidden bg-[#283450] py-16 text-white sm:py-24"
     >
-      {/* Subtle grid + glow backdrop to match the hero */}
-      <div className="absolute inset-0 grid-bg-light opacity-60" />
-      <div className="animate-pulse-glow pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-brand/15 blur-[120px]" />
-      <div className="animate-pulse-glow pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-accent/10 blur-[120px]" />
+      {/* Subtle grid + glow backdrop */}
+      <div className="absolute inset-0 grid-bg opacity-25" />
+      <div className="animate-pulse-glow pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-brand/20 blur-[120px]" />
+      <div className="animate-pulse-glow pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-accent/15 blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
+          light
           eyebrow="Life at the Centre"
           title="Inside the lab — our people at work"
           subtitle="Candid moments from the bench, the lab and the team behind every prototype we build."

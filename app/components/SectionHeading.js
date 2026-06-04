@@ -5,7 +5,11 @@ export default function SectionHeading({ eyebrow, title, subtitle, light = false
   return (
     <Reveal className="mx-auto max-w-3xl text-center">
       {eyebrow && (
-        <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-brand-dark sm:px-4 sm:text-xs">
+        <span
+          className={`inline-block rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-widest sm:px-4 sm:text-xs ${
+            light ? "bg-brand/15 text-brand" : "bg-brand/10 text-brand-dark"
+          }`}
+        >
           {eyebrow}
         </span>
       )}
