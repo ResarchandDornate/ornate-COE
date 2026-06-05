@@ -51,7 +51,7 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="/#contact"
+          href="/contact"
           className="hidden rounded-full bg-linear-to-r from-brand-dark to-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand/40 ring-1 ring-white/20 transition-transform hover:scale-105 lg:inline-block"
         >
           Get in touch
@@ -91,7 +91,7 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="/#contact"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="mt-2 block rounded-lg bg-linear-to-r from-brand-dark to-brand px-4 py-2.5 text-center text-sm font-semibold text-white shadow-md shadow-brand/30"
             >

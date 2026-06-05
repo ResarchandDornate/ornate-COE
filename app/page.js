@@ -6,7 +6,6 @@ import Products from "./components/Products";
 import Roadmap from "./components/Roadmap";
 import Gallery from "./components/Gallery";
 import Partners from "./components/Partners";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
         <Roadmap />
         <Gallery />
         <Partners />
-        <Contact />
       </main>
       <Footer />
     </>

@@ -11,7 +11,6 @@ export const NAV_LINKS = [
   { label: "Team", href: "/team" },
   { label: "Gallery", href: "/#gallery" },
   { label: "Partners", href: "/#partners" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 // Gallery — candid team & lab photos. Files live in /public/team.
@@ -180,7 +179,12 @@ export const ROADMAP = [
 
 // Team — photos live in /public. Update `role` for each member as needed.
 export const TEAM = [
-  { name: "Aditya", role: "Power Electronics Engineer", img: "/Aditya_pic.jpeg" },
+  {
+    name: "Aditya Kumar Agarhari",
+    role: "Power Electronics & PCB Engineer",
+    img: "/Aditya_pic.jpeg",
+    bio: "Power electronics and PCB design engineer skilled in Altium and KiCad. Works on BOM development, motor-driver and voltage-regulator circuits, and R&D patent documentation for power-conversion systems.",
+  },
   {
     name: "Akankshi Trivedi",
     role: "Power Electronics Engineer",
@@ -205,11 +209,42 @@ export const TEAM = [
     img: "/Kashyap_pic.jpeg",
     bio: "Industrial designer shaping IP-rated enclosures and CMF for inverter systems; led the design of a solar panel cleaning robot and residential solar carports.",
   },
-  { name: "Krishna", role: "Control Systems Engineer", img: "/Krishna_pic.jpeg" },
-  { name: "Pravesh", role: "Test & Validation Engineer", img: "/Pravesh_pic.jpeg" },
-  { name: "Ritika", role: "Research Associate", img: "/Ritika_pic.jpeg" },
-  { name: "Tamanna", role: "Design Engineer", img: "/Tamanna_pic.jpeg" },
-  { name: "Kanchan", role: "Research Engineer", img: "/Kanchan_pic.jpeg" },
+  {
+    name: "Krishna Gullapalli",
+    role: "Embedded Systems Developer",
+    img: "/Krishna_pic.jpeg",
+    bio: "Embedded systems developer building STM32-based inverter communication and monitoring boards with Wi-Fi and LCD, implementing UART, SPI, I2C, Modbus, MQTT and WebSocket protocols.",
+  },
+  {
+    name: "Pravesh Kumar",
+    role: "Inverter Testing Engineer",
+    img: "/pravesh.png",
+    bio: "Inverter testing engineer handling soldering and circuit assembly, sensor-circuit test and calibration, and hybrid-inverter performance testing, alongside R&D BOM management.",
+  },
+  {
+    name: "Dr. Ritika Agarwal",
+    role: "Senior Engineer — EE Wing",
+    img: "/Ritika_pic.jpeg",
+    bio: "Senior engineer with a PhD in Power Electronics from Thapar. Designs 3 kW and 6 kW grid-tied solar inverters and isolated SMPS, with research in multilevel inverters and EV charging.",
+  },
+  {
+    name: "Tamnna Ameri",
+    role: "Firmware Developer",
+    img: "/Tamanna_pic.jpeg",
+    bio: "Firmware developer writing and debugging Embedded C/C++ for microcontroller-based systems, interfacing peripherals such as GPIO, ADC, UART and I2C and validating firmware on hardware.",
+  },
+  {
+    name: "Dr. Kanchan Bala Rai",
+    role: "Senior Engineer — Power & Electronics",
+    img: "/Kanchan_pic.jpeg",
+    bio: "Doctoral power electronics engineer specializing in control-logic design and embedded programming, validating solar power-electronics systems with MATLAB, dSPACE and OPAL-RT.",
+  },
+  {
+    name: "Ankit Kumar",
+    role: "Hardware Test & BOM Engineer",
+    img: "/ankit.jpeg",
+    bio: "Electrical engineer handling functional testing and fault diagnosis of hardware circuit boards, BOM maintenance and vendor coordination for the grid-tied solar inverter development pipeline.",
+  },
 ];
 
 export const CONTACT = {

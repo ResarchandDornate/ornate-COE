@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Reveal from "./Reveal";
-import SectionHeading from "./SectionHeading";
 import { CONTACT } from "../data";
 
 export default function Contact() {
@@ -16,15 +15,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-[#faf8fe] py-16 sm:py-28">
+    <section id="contact" className="bg-[#faf8fe] py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <SectionHeading
-          eyebrow="Get in Touch"
-          title="Let's build clean energy together"
-          subtitle="For collaborations, internships, research partnerships or product enquiries — reach out to the Centre of Excellence."
-        />
-
-        <div className="mt-10 grid gap-6 sm:mt-14 sm:gap-8 lg:grid-cols-5">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-5">
           {/* Info */}
           <Reveal className="lg:col-span-2">
             <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-linear-to-br from-[#f5eefe] to-[#ece2fb] p-6 text-navy-800 shadow-sm sm:rounded-3xl sm:p-8">

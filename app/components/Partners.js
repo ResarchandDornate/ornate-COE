@@ -48,14 +48,14 @@ export default function Partners() {
         <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 md:grid-cols-2">
           {PILLARS.map((p, i) => (
             <Reveal key={p.title} delay={i * 120}>
-              <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 sm:rounded-3xl sm:p-8">
-                <div className="icon-gradient flex h-12 w-12 items-center justify-center rounded-xl shadow-lg shadow-accent/30 transition-transform group-hover:scale-110 sm:h-14 sm:w-14 sm:rounded-2xl">
+              <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-brand/20 sm:rounded-3xl sm:p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-brand to-accent text-white shadow-lg shadow-brand/30 transition-all duration-300 group-hover:scale-110 group-hover:from-brand-dark group-hover:to-brand sm:h-14 sm:w-14 sm:rounded-2xl">
                   <Icon name={p.icon} />
                 </div>
                 <span className="mt-5 inline-block text-[10px] font-semibold uppercase tracking-widest text-brand-dark sm:mt-6 sm:text-xs">
                   {p.tag}
                 </span>
-                <h3 className="mt-2 font-display text-lg font-bold text-navy-800 sm:text-xl">
+                <h3 className="mt-2 font-display text-lg font-bold text-navy-800 transition-colors group-hover:text-brand-dark sm:text-xl">
                   {p.title}
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-slate-600 sm:mt-3 sm:text-base">{p.body}</p>

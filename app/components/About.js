@@ -33,11 +33,11 @@ export default function About() {
 
         <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 md:grid-cols-2">
           <Reveal delay={0}>
-            <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-xl hover:shadow-brand/10 sm:rounded-3xl sm:p-8">
-              <div className="icon-gradient flex h-12 w-12 items-center justify-center rounded-xl shadow-lg shadow-brand/30 transition-transform group-hover:scale-110 sm:h-14 sm:w-14 sm:rounded-2xl">
+            <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-brand/20 sm:rounded-3xl sm:p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-brand to-accent text-white shadow-lg shadow-brand/30 transition-all duration-300 group-hover:scale-110 group-hover:from-brand-dark group-hover:to-brand sm:h-14 sm:w-14 sm:rounded-2xl">
                 <VisionIcon />
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold text-navy-800 sm:mt-6 sm:text-2xl">
+              <h3 className="mt-5 font-display text-xl font-bold text-navy-800 transition-colors group-hover:text-brand-dark sm:mt-6 sm:text-2xl">
                 Vision
               </h3>
               <p className="mt-2.5 text-sm leading-relaxed text-slate-600 sm:mt-3 sm:text-base">{VISION}</p>
@@ -45,11 +45,11 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 sm:rounded-3xl sm:p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-accent to-brand-dark text-white shadow-lg shadow-accent/30 transition-transform group-hover:scale-110 sm:h-14 sm:w-14 sm:rounded-2xl">
+            <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/20 sm:rounded-3xl sm:p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-accent to-brand-dark text-white shadow-lg shadow-accent/30 transition-all duration-300 group-hover:scale-110 group-hover:from-brand-dark group-hover:to-accent sm:h-14 sm:w-14 sm:rounded-2xl">
                 <MissionIcon />
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold text-navy-800 sm:mt-6 sm:text-2xl">
+              <h3 className="mt-5 font-display text-xl font-bold text-navy-800 transition-colors group-hover:text-accent-dark sm:mt-6 sm:text-2xl">
                 Mission
               </h3>
               <p className="mt-2.5 text-sm leading-relaxed text-slate-600 sm:mt-3 sm:text-base">{MISSION}</p>

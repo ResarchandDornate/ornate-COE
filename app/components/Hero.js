@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
         <div className="max-w-3xl">
           <h1 className="font-display tracking-tight text-white">
-            <span className="text-gradient-light block whitespace-nowrap text-base font-semibold uppercase tracking-[0.18em] sm:text-2xl lg:text-3xl">
+            <span className="text-gradient block whitespace-nowrap text-base font-semibold uppercase tracking-[0.18em] sm:text-2xl lg:text-3xl">
               Centre of Excellence
             </span>
             <span className="mt-2 block text-2xl font-bold leading-[1.08] sm:text-5xl sm:leading-[1.05] lg:text-6xl">

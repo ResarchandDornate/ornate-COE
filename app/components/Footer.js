@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { NAV_LINKS, CONTACT } from "../data";
 
 export default function Footer() {
@@ -8,14 +7,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <Image
-                src="/ornateLogo.png"
-                alt="Ornate Solar"
-                width={132}
-                height={48}
-                className="h-9 w-auto"
-              />
-              <div className="border-l border-white/15 pl-3 leading-tight">
+              <div className="leading-tight">
                 <p className="font-display font-bold text-white">
                   B.K. Bhattacharyya CoE
                 </p>
