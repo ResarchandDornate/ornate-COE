@@ -26,7 +26,7 @@ export default function Roadmap() {
 
         <div className="relative mt-16">
           {/* vertical line */}
-          <div className="absolute left-4 top-2 h-full w-0.5 bg-gradient-to-b from-accent via-brand to-slate-300 sm:left-1/2 sm:-translate-x-1/2" />
+          <div className="absolute left-4 top-2 h-full w-0.5 bg-linear-to-b from-accent via-brand to-slate-300 sm:left-1/2 sm:-translate-x-1/2" />
 
           <div className="space-y-10">
             {ROADMAP.map((item, i) => (
@@ -43,7 +43,7 @@ export default function Roadmap() {
 
                   <div className="sm:w-1/2 sm:px-8">
                     <div
-                      className={`rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl ${
+                      className={`card-gradient rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-brand/10 ${
                         i % 2 === 0 ? "sm:text-right" : "sm:text-left"
                       }`}
                     >

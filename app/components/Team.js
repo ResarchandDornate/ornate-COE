@@ -5,7 +5,7 @@ import { TEAM } from "../data";
 
 export default function Team() {
   return (
-    <section id="team" className="bg-[#fbfaf8] py-16 sm:py-28">
+    <section id="team" className="bg-[#faf8fe] py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Our Team"
@@ -13,34 +13,28 @@ export default function Team() {
           subtitle="A multidisciplinary team of power-electronics, hardware, firmware and research engineers driving every product from concept to validation."
         />
 
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:mt-14 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-5 sm:mt-14 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
           {TEAM.map((member, i) => (
-            <Reveal key={member.name} delay={(i % 4) * 80}>
-              <div className="group relative overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_-12px_rgba(20,30,51,0.25)] ring-1 ring-slate-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_22px_45px_-15px_rgba(249,107,82,0.45)] hover:ring-brand/30">
-                {/* Photo */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-100">
+            <Reveal key={member.name} delay={(i % 4) * 80} className="h-full">
+              <div className="group flex h-full flex-col items-center rounded-2xl border-2 border-slate-100 bg-white px-4 py-7 text-center shadow-[0_18px_40px_-18px_rgba(33,17,66,0.30)] transition-all duration-300 hover:-translate-y-2 hover:border-brand hover:shadow-[0_28px_55px_-20px_rgba(124,58,237,0.50)]">
+                {/* Circular avatar */}
+                <div className="relative h-28 w-28 overflow-hidden rounded-full bg-slate-100 ring-4 ring-slate-100 transition-all duration-300 group-hover:ring-brand/25 sm:h-32 sm:w-32">
                   <Image
                     src={member.img}
                     alt={member.name}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="(max-width: 640px) 112px, 128px"
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* Soft blend from photo into the white body */}
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-white to-transparent" />
                 </div>
 
-                {/* Name + role body */}
-                <div className="relative px-3 pb-4 pt-2 text-center sm:px-4 sm:pb-5">
-                  <h3 className="font-display text-sm font-bold leading-tight text-navy-800 sm:text-base">
-                    {member.name}
-                  </h3>
-                  <p className="mt-1 text-[11px] font-medium leading-snug text-brand-dark sm:text-xs">
-                    {member.role}
-                  </p>
-                  {/* Animated coral→emerald accent line */}
-                  <span className="mx-auto mt-2.5 block h-0.5 w-6 rounded-full bg-gradient-to-r from-brand to-accent transition-all duration-300 group-hover:w-12" />
-                </div>
+                {/* Name + role */}
+                <h3 className="mt-5 font-display text-sm font-bold leading-tight text-brand-dark sm:text-base">
+                  {member.name}
+                </h3>
+                <p className="mt-1.5 text-xs font-medium leading-snug text-slate-800 sm:text-[13px]">
+                  {member.role}
+                </p>
               </div>
             </Reveal>
           ))}

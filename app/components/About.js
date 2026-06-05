@@ -33,8 +33,8 @@ export default function About() {
 
         <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 md:grid-cols-2">
           <Reveal delay={0}>
-            <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-xl hover:shadow-brand/5 sm:rounded-3xl sm:p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand-dark transition-colors group-hover:bg-brand group-hover:text-navy sm:h-14 sm:w-14 sm:rounded-2xl">
+            <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-xl hover:shadow-brand/10 sm:rounded-3xl sm:p-8">
+              <div className="icon-gradient flex h-12 w-12 items-center justify-center rounded-xl shadow-lg shadow-brand/30 transition-transform group-hover:scale-110 sm:h-14 sm:w-14 sm:rounded-2xl">
                 <VisionIcon />
               </div>
               <h3 className="mt-5 font-display text-xl font-bold text-navy-800 sm:mt-6 sm:text-2xl">
@@ -45,8 +45,8 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5 sm:rounded-3xl sm:p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent-dark transition-colors group-hover:bg-accent group-hover:text-white sm:h-14 sm:w-14 sm:rounded-2xl">
+            <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 sm:rounded-3xl sm:p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-accent to-brand-dark text-white shadow-lg shadow-accent/30 transition-transform group-hover:scale-110 sm:h-14 sm:w-14 sm:rounded-2xl">
                 <MissionIcon />
               </div>
               <h3 className="mt-5 font-display text-xl font-bold text-navy-800 sm:mt-6 sm:text-2xl">

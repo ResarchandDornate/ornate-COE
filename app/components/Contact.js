@@ -16,7 +16,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-[#fbfaf8] py-16 sm:py-28">
+    <section id="contact" className="bg-[#faf8fe] py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Get in Touch"
@@ -27,7 +27,7 @@ export default function Contact() {
         <div className="mt-10 grid gap-6 sm:mt-14 sm:gap-8 lg:grid-cols-5">
           {/* Info */}
           <Reveal className="lg:col-span-2">
-            <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-gradient-to-br from-[#fff5f1] to-[#eefaf4] p-6 text-navy-800 shadow-sm sm:rounded-3xl sm:p-8">
+            <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-linear-to-br from-[#f5eefe] to-[#ece2fb] p-6 text-navy-800 shadow-sm sm:rounded-3xl sm:p-8">
               <div>
                 <h3 className="font-display text-lg font-bold sm:text-xl">{CONTACT.org}</h3>
                 <p className="mt-1 text-xs font-medium text-brand-dark sm:text-sm">
@@ -95,7 +95,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="mt-6 w-full rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-navy shadow-lg shadow-brand/20 transition-transform hover:scale-[1.02] sm:w-auto"
+                className="btn-gradient mt-6 w-full rounded-full px-6 py-3.5 text-sm font-semibold shadow-lg shadow-brand/20 hover:scale-[1.02] sm:w-auto"
               >
                 {sent ? "✓ Message received — thank you!" : "Send message"}
               </button>

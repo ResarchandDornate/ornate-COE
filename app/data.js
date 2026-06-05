@@ -4,14 +4,14 @@
 // ---------------------------------------------------------------------------
 
 export const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Objectives", href: "#objectives" },
-  { label: "Products", href: "#products" },
-  { label: "Roadmap", href: "#roadmap" },
-  { label: "Team", href: "#team" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Partners", href: "#partners" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Objectives", href: "/#objectives" },
+  { label: "Products", href: "/#products" },
+  { label: "Roadmap", href: "/#roadmap" },
+  { label: "Team", href: "/team" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Partners", href: "/#partners" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 // Gallery — candid team & lab photos. Files live in /public/team.

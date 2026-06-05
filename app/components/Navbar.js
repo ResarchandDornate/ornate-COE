@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "../data";
 
@@ -19,27 +18,17 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#fbfaf8]/90 backdrop-blur-md shadow-lg shadow-slate-900/5"
+          ? "bg-[#faf8fe]/90 backdrop-blur-md shadow-lg shadow-slate-900/5"
           : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <a href="#home" className="group flex items-center gap-3">
-          <Image
-            src="/ornateLogo.png"
-            alt="Ornate Solar"
-            width={132}
-            height={48}
-            priority
-            className="h-7 w-auto transition-transform group-hover:scale-105 sm:h-9"
-          />
-          <span className="hidden flex-col border-l border-slate-300 pl-3 leading-tight sm:flex">
-            <span className="font-display text-sm font-bold tracking-wide text-navy-800">
-              B.K. Bhattacharyya CoE
-            </span>
-            <span className="text-[11px] font-medium text-brand-dark">
-              Centre of Excellence
-            </span>
+        <a href="/" className="group flex flex-col leading-tight transition-transform group-hover:scale-105">
+          <span className={`font-display text-lg font-extrabold tracking-wide sm:text-xl ${scrolled ? "text-navy-800" : "text-white"}`}>
+            B.K. Bhattacharyya
+          </span>
+          <span className={`text-xs font-semibold uppercase tracking-wider sm:text-sm ${scrolled ? "text-brand-dark" : "text-purple-200"}`}>
+            Centre of Excellence
           </span>
         </a>
 
@@ -49,7 +38,11 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 hover:text-brand-dark"
+                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  scrolled
+                    ? "text-slate-700 hover:bg-slate-100 hover:text-brand-dark"
+                    : "text-purple-100 hover:bg-white/10 hover:text-white"
+                }`}
               >
                 {link.label}
               </a>
@@ -58,8 +51,8 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="#contact"
-          className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-navy shadow-lg shadow-brand/30 transition-transform hover:scale-105 lg:inline-block"
+          href="/#contact"
+          className="hidden rounded-full bg-linear-to-r from-brand-dark to-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand/40 ring-1 ring-white/20 transition-transform hover:scale-105 lg:inline-block"
         >
           Get in touch
         </a>
@@ -68,19 +61,19 @@ export default function Navbar() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-navy-800 lg:hidden"
+          className={`flex h-10 w-10 items-center justify-center rounded-lg lg:hidden ${scrolled ? "text-navy-800" : "text-white"}`}
         >
           <div className="space-y-1.5">
-            <span className={`block h-0.5 w-6 bg-navy-800 transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`block h-0.5 w-6 bg-navy-800 transition-opacity ${open ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 w-6 bg-navy-800 transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 transition-transform ${scrolled ? "bg-navy-800" : "bg-white"} ${open ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 transition-opacity ${scrolled ? "bg-navy-800" : "bg-white"} ${open ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-6 transition-transform ${scrolled ? "bg-navy-800" : "bg-white"} ${open ? "-translate-y-2 -rotate-45" : ""}`} />
           </div>
         </button>
       </nav>
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden border-t border-slate-200 bg-[#fbfaf8]/95 backdrop-blur-md transition-[max-height] duration-300 lg:hidden ${
+        className={`overflow-hidden border-t border-slate-200 bg-[#faf8fe]/95 backdrop-blur-md transition-[max-height] duration-300 lg:hidden ${
           open ? "max-h-112" : "max-h-0"
         }`}
       >
@@ -98,9 +91,9 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 block rounded-lg bg-brand px-4 py-2.5 text-center text-sm font-semibold text-navy"
+              className="mt-2 block rounded-lg bg-linear-to-r from-brand-dark to-brand px-4 py-2.5 text-center text-sm font-semibold text-white shadow-md shadow-brand/30"
             >
               Get in touch
             </a>

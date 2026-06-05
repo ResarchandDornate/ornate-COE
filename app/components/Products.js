@@ -17,7 +17,7 @@ export default function Products() {
   const tone = TONE[product.statusTone];
 
   return (
-    <section id="products" className="relative overflow-hidden bg-[#f1f5f9] py-16 text-navy-800 sm:py-28">
+    <section id="products" className="relative overflow-hidden bg-[#f3eefb] py-16 text-navy-800 sm:py-28">
       <div className="absolute inset-0 grid-bg-light opacity-60" />
       <div className="absolute -right-20 top-40 h-80 w-80 rounded-full bg-brand/10 blur-[120px]" />
 
@@ -54,7 +54,7 @@ export default function Products() {
 
         {/* Active product card */}
         <Reveal key={product.id} className="mt-10">
-          <div className="grid gap-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:gap-8 sm:rounded-3xl sm:p-10 lg:grid-cols-2">
+          <div className="card-gradient grid gap-6 rounded-2xl border border-slate-200 p-5 shadow-sm sm:gap-8 sm:rounded-3xl sm:p-10 lg:grid-cols-2">
             <div>
               <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-[10px] font-semibold sm:text-xs ${tone.chip}`}>
                 <span className={`h-1.5 w-1.5 rounded-full ${tone.dot}`} />

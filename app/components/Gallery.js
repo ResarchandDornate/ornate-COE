@@ -17,7 +17,7 @@ function Card({ item }) {
         sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 320px"
         className="object-cover transition-transform duration-500 group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#222d45]/60 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90" />
+      <div className="absolute inset-0 bg-linear-to-t from-[#1b1036]/60 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90" />
       <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10 transition-colors duration-300 group-hover:ring-brand/50" />
     </div>
   );
@@ -44,7 +44,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative overflow-hidden bg-[#283450] py-16 text-white sm:py-24"
+      className="relative overflow-hidden bg-linear-to-b from-navy via-navy-700 to-navy-600 py-16 text-white sm:py-24"
     >
       {/* Subtle grid + glow backdrop */}
       <div className="absolute inset-0 grid-bg opacity-25" />
