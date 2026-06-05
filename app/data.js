@@ -4,9 +4,9 @@
 // ---------------------------------------------------------------------------
 
 export const NAV_LINKS = [
-  { label: "About", href: "/#about" },
+  { label: "Home", href: "/#home" },
   { label: "Objectives", href: "/#objectives" },
-  { label: "Products", href: "/#products" },
+  { label: "Achievements", href: "/#products" },
   { label: "Roadmap", href: "/#roadmap" },
   { label: "Team", href: "/team" },
   { label: "Gallery", href: "/#gallery" },

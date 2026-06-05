@@ -4,7 +4,6 @@ import About from "./components/About";
 import Objectives from "./components/Objectives";
 import Products from "./components/Products";
 import Roadmap from "./components/Roadmap";
-import Team from "./components/Team";
 import Gallery from "./components/Gallery";
 import Partners from "./components/Partners";
 import Contact from "./components/Contact";
@@ -20,7 +19,6 @@ export default function Home() {
         <Objectives />
         <Products />
         <Roadmap />
-        <Team />
         <Gallery />
         <Partners />
         <Contact />
