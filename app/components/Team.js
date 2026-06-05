@@ -35,6 +35,11 @@ export default function Team() {
                 <p className="mt-1.5 text-xs font-medium leading-snug text-slate-800 sm:text-[13px]">
                   {member.role}
                 </p>
+                {member.bio && (
+                  <p className="mt-2.5 text-[11px] leading-relaxed text-slate-600">
+                    {member.bio}
+                  </p>
+                )}
               </div>
             </Reveal>
           ))}

@@ -180,15 +180,33 @@ export const ROADMAP = [
 
 // Team — photos live in /public. Update `role` for each member as needed.
 export const TEAM = [
-  { name: "Arindam", role: "Lead — Power Electronics R&D", img: "/Arindam_pic.jpeg" },
-  { name: "Arghya", role: "Senior Hardware Design Engineer", img: "/Arghya_pic.jpeg" },
   { name: "Aditya", role: "Power Electronics Engineer", img: "/Aditya_pic.jpeg" },
-  { name: "Akash", role: "Embedded Systems Engineer", img: "/Akash_pic.jpeg" },
-  { name: "Gourav", role: "Firmware Engineer", img: "/Gourav_pic.jpeg" },
-  { name: "Kashyap", role: "PCB Design Engineer", img: "/Kashyap_pic.jpeg" },
+  {
+    name: "Akankshi Trivedi",
+    role: "Power Electronics Engineer",
+    img: "/akanshi.png",
+    bio: "PhD candidate at IIT Delhi designing transformer-less single-phase PV grid-tied inverters with DQ cascaded control and SiC-based high-efficiency stages.",
+  },
+  {
+    name: "Akash Yadav",
+    role: "R&D Engineer",
+    img: "/akash.png",
+    bio: "Electrical engineer working on boost converters, component characterization and inverter testing in the R&D lab.",
+  },
+  {
+    name: "Gaurav Kumar",
+    role: "Embedded Developer",
+    img: "/gourav.png",
+    bio: "Builds DQ control-based grid-tied inverter firmware on STM32, with experience across IoT and BLE products using Zephyr RTOS.",
+  },
+  {
+    name: "Kashyap Masiwal",
+    role: "Industrial Designer & Project Lead",
+    img: "/Kashyap_pic.jpeg",
+    bio: "Industrial designer shaping IP-rated enclosures and CMF for inverter systems; led the design of a solar panel cleaning robot and residential solar carports.",
+  },
   { name: "Krishna", role: "Control Systems Engineer", img: "/Krishna_pic.jpeg" },
   { name: "Pravesh", role: "Test & Validation Engineer", img: "/Pravesh_pic.jpeg" },
-  { name: "Akankshi", role: "Research Associate", img: "/Akankshi_pic.jpeg" },
   { name: "Ritika", role: "Research Associate", img: "/Ritika_pic.jpeg" },
   { name: "Tamanna", role: "Design Engineer", img: "/Tamanna_pic.jpeg" },
   { name: "Kanchan", role: "Research Engineer", img: "/Kanchan_pic.jpeg" },
