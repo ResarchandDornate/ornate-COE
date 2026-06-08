@@ -22,12 +22,12 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 lg:px-8">
         <a href="/" className="group flex flex-col leading-tight transition-transform group-hover:scale-105">
-          <span className={`font-display text-lg font-extrabold tracking-wide sm:text-xl ${scrolled ? "text-navy-800" : "text-white"}`}>
+          <span className={`font-display text-base font-extrabold tracking-wide sm:text-lg ${scrolled ? "text-navy-800" : "text-white"}`}>
             B.K. Bhattacharyya
           </span>
-          <span className={`text-xs font-semibold uppercase tracking-wider sm:text-sm ${scrolled ? "text-brand-dark" : "text-purple-200"}`}>
+          <span className={`text-[10px] font-semibold uppercase tracking-wider sm:text-xs ${scrolled ? "text-brand-dark" : "text-purple-200"}`}>
             Centre of Excellence
           </span>
         </a>
@@ -52,7 +52,7 @@ export default function Navbar() {
 
         <a
           href="/contact"
-          className="hidden rounded-full bg-linear-to-r from-brand-dark to-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand/40 ring-1 ring-white/20 transition-transform hover:scale-105 lg:inline-block"
+          className="hidden rounded-full bg-linear-to-r from-brand-dark to-brand px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-brand/40 ring-1 ring-white/20 transition-transform hover:scale-105 lg:inline-block"
         >
           Get in touch
         </a>

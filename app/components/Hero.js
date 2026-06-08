@@ -34,7 +34,7 @@ export default function Hero() {
               Centre of Excellence
             </span>
             <span className="mt-2 block text-2xl font-bold leading-[1.08] sm:text-5xl sm:leading-[1.05] lg:text-6xl">
-              B.K. Bhattacharyya
+              Professor B.K. Bhattacharyya
             </span>
           </h1>
 
@@ -57,7 +57,7 @@ export default function Hero() {
               Explore our products
             </a>
             <a
-              href="#about"
+              href="/about"
               className="rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
             >
               Vision &amp; Mission
@@ -85,7 +85,7 @@ export default function Hero() {
                 <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
                   <div className="btn-gradient rounded-full px-4 py-3 text-center shadow-lg shadow-brand/40">
                     <span className="font-display text-sm font-bold tracking-wide text-white sm:text-base">
-                      Bidyut Kumar Bhattacharyya
+                      Professor Bidyut Kumar Bhattacharyya
                     </span>
                   </div>
                 </div>

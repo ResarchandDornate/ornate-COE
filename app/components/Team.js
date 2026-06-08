@@ -13,9 +13,13 @@ export default function Team() {
           subtitle="A multidisciplinary team of power-electronics, hardware, firmware and research engineers driving every product from concept to validation."
         />
 
-        <div className="mt-10 grid grid-cols-2 gap-5 sm:mt-14 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
+        <div className="mt-10 flex flex-wrap justify-center gap-5 sm:mt-14 sm:gap-6">
           {TEAM.map((member, i) => (
-            <Reveal key={member.name} delay={(i % 4) * 80} className="h-full">
+            <Reveal
+              key={member.name}
+              delay={(i % 3) * 80}
+              className="h-full w-[calc(50%-0.625rem)] sm:w-[calc(33.333%-1rem)]"
+            >
               <div className="group flex h-full flex-col items-center rounded-2xl border-2 border-slate-100 bg-white px-4 py-7 text-center shadow-[0_18px_40px_-18px_rgba(33,17,66,0.30)] transition-all duration-300 hover:-translate-y-2 hover:border-brand hover:shadow-[0_28px_55px_-20px_rgba(124,58,237,0.50)]">
                 {/* Circular avatar */}
                 <div className="relative h-28 w-28 overflow-hidden rounded-full bg-slate-100 ring-4 ring-slate-100 transition-all duration-300 group-hover:ring-brand/25 sm:h-32 sm:w-32">

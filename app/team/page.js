@@ -83,7 +83,7 @@ export default function TeamPage() {
                 {/* Details */}
                 <div className="p-6 sm:p-9">
                   <h2 className="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
-                    Bidyut Kumar Bhattacharyya
+                    Professor Bidyut Kumar Bhattacharyya
                   </h2>
                   <span className="mt-3 block h-1 w-12 rounded-full bg-linear-to-r from-brand to-accent" />
                   <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-slate-500 sm:text-sm">

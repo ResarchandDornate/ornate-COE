@@ -1,5 +1,4 @@
 import Reveal from "./Reveal";
-import SectionHeading from "./SectionHeading";
 import { VISION, MISSION } from "../data";
 
 function VisionIcon() {
@@ -23,15 +22,9 @@ function MissionIcon() {
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-slate-50 py-16 sm:py-28">
+    <section id="about" className="relative bg-slate-50 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <SectionHeading
-          eyebrow="Who We Are"
-          title="A centre built for indigenous power electronics"
-          subtitle="The Centre of Excellence researches, designs, prototypes and commercializes advanced power electronics and clean energy systems — all engineered in-house in India."
-        />
-
-        <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 md:grid-cols-2">
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
           <Reveal delay={0}>
             <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-brand/20 sm:rounded-3xl sm:p-8">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-brand to-accent text-white shadow-lg shadow-brand/30 transition-all duration-300 group-hover:scale-110 group-hover:from-brand-dark group-hover:to-brand sm:h-14 sm:w-14 sm:rounded-2xl">
