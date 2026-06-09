@@ -2,31 +2,32 @@
 
 /* ------------------------------------------------------------------ */
 /*  B.K. Bhattacharyya Centre of Excellence — Design System            */
-/*  Palette: deep dark-purple base + vivid purple + soft lilac accents */
-/*  Tuned for eye comfort: lifted (not pure-black) darks, slightly     */
-/*  off-white surface, softened body text, lower-glare purple accents. */
+/*  Theme: "Indigenous Engineering / Clean-Energy Tech"                */
+/*  Palette: white canvas + engineering blue + clean-energy teal,      */
+/*  navy-slate ink, deep-navy anchor, solar amber used sparingly.      */
 /* ------------------------------------------------------------------ */
 
 @theme {
-  /* Lifted dark purple — softer than pure black for comfortable contrast */
-  --color-navy: #160b2e;
-  --color-navy-800: #211142;
-  --color-navy-700: #2e1a5c;
-  --color-navy-600: #432a7a;
+  /* Deep navy slate — anchor for footer / dark sections (not pure black) */
+  --color-navy: #0d1a2e;
+  --color-navy-800: #1a1625;     /* headings ink — crisp near-black plum */
+  --color-navy-700: #102a45;
+  --color-navy-600: #16365a;
 
-  --color-brand: #a855f7;        /* vivid purple — primary accent */
-  --color-brand-dark: #7c3aed;   /* deep purple — accessible text on white */
-  --color-accent: #c084fc;       /* light purple / lilac */
-  --color-accent-dark: #9333ea;  /* medium purple */
-  --color-electric: #d8b4fe;     /* soft lavender highlight */
+  --color-brand: #9333ea;        /* vivid purple — primary accent */
+  --color-brand-dark: #7e22ce;   /* deep purple — hover / accessible text */
+  --color-accent: #f97316;       /* vivid orange — secondary */
+  --color-accent-dark: #ea580c;  /* deep orange */
+  --color-electric: #d946ef;     /* fuchsia highlight */
 
   --font-sans: var(--font-inter);
   --font-display: var(--font-space);
+  --font-mono: var(--font-jet);
 }
 
 :root {
-  --background: #faf8fe;          /* cool off-white with a faint lilac tint */
-  --foreground: #211a30;         /* soft near-black with a purple undertone */
+  --background: #ffffff;          /* white page canvas */
+  --foreground: #1a1625;         /* crisp near-black plum ink */
 }
 
 html {
@@ -39,20 +40,90 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ----- Global polish: selection, focus, typography, scrollbar ----- */
+
+/* Branded text selection */
+::selection {
+  background: rgba(147, 51, 234, 0.16);
+  color: #7e22ce;
+}
+
+/* Accessible keyboard focus — appears only for keyboard users, never
+   on mouse click, so it never intrudes on the visual design. */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+}
+
+/* Drop the grey tap-flash on touch — components carry their own
+   hover / active states. */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The navbar is fixed (~5rem tall). Keep in-page anchor jumps from
+   landing underneath it. */
+:where(section[id]) {
+  scroll-margin-top: 6rem;
+}
+
+/* Typography refinement — balanced headlines, tidy paragraph rags. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* Subtle, brand-tinted scrollbar on desktop pointers. */
+@media (pointer: fine) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(147, 51, 234, 0.32) transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(147, 51, 234, 0.3);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(147, 51, 234, 0.55);
+    background-clip: padding-box;
+  }
+}
+
 /* ----- Reusable utility classes ----------------------------------- */
 
 .text-gradient {
-  background: linear-gradient(120deg, #7c3aed 0%, #a855f7 45%, #d8b4fe 100%);
+  background: linear-gradient(105deg, #7c3aed 0%, #db2777 42%, #f97316 78%, #7c3aed 100%);
+  background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: text-shimmer 9s ease-in-out infinite;
 }
 
-/* ----- Gradient presets — presentation-ready purple look ---------- */
+@keyframes text-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
 
-/* Primary CTA button: deep → light purple sweep that shifts on hover */
+/* ----- Gradient presets — blue → cyan → teal signature look ------- */
+
+/* Primary CTA button: deep-blue → blue → teal sweep that shifts on hover */
 .btn-gradient {
-  background-image: linear-gradient(135deg, #6d28d9 0%, #a855f7 55%, #c084fc 100%);
+  background-image: linear-gradient(100deg, #7c3aed 0%, #db2777 50%, #ea580c 100%);
   background-size: 160% 160%;
   background-position: 0 0;
   color: #fff;
@@ -63,14 +134,40 @@ body {
   background-position: 100% 0;
 }
 
-/* Soft card surface: white melting into faint lilac */
+/* Full-bleed vivid mesh-gradient backdrop — fills the whole section edge to
+   edge like a designed background image (no floating blobs). Light + ultra-HD. */
+.mesh-hero {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(at 18% 16%, rgba(167, 139, 250, 0.13) 0px, transparent 45%),
+    radial-gradient(at 85% 14%, rgba(244, 114, 182, 0.11) 0px, transparent 45%),
+    radial-gradient(at 80% 82%, rgba(251, 146, 60, 0.09) 0px, transparent 45%),
+    radial-gradient(at 12% 84%, rgba(103, 232, 249, 0.11) 0px, transparent 45%),
+    radial-gradient(at 50% 42%, rgba(255, 255, 255, 0.7) 0px, transparent 55%);
+}
+
+/* A calmer mesh for header bands / mid-page feature bands */
+.mesh-soft {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(at 12% 18%, rgba(167, 139, 250, 0.10) 0px, transparent 45%),
+    radial-gradient(at 88% 16%, rgba(244, 114, 182, 0.08) 0px, transparent 45%),
+    radial-gradient(at 72% 86%, rgba(251, 146, 60, 0.07) 0px, transparent 48%);
+}
+
+/* Soft card surface: white melting into a faint blue tint.
+   On hover it warms into a soft teal wash to match the theme. */
 .card-gradient {
-  background-image: linear-gradient(160deg, #ffffff 0%, #faf6ff 55%, #f1e7fc 100%);
+  background-image: linear-gradient(160deg, #ffffff 0%, #f8f8ff 55%, #eef0fe 100%);
+  transition: background-image 0.45s ease;
+}
+.card-gradient:hover {
+  background-image: linear-gradient(160deg, #fdf4ff 0%, #fae8ff 55%, #fce7f3 100%);
 }
 
 /* Heading gradient tuned for dark sections */
 .text-gradient-light {
-  background: linear-gradient(120deg, #d8b4fe 0%, #f0e3ff 50%, #ffffff 100%);
+  background: linear-gradient(120deg, #fed7aa 0%, #fecdd3 50%, #ffffff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -78,16 +175,16 @@ body {
 
 .grid-bg {
   background-image:
-    linear-gradient(to right, rgba(168, 85, 247, 0.10) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(168, 85, 247, 0.10) 1px, transparent 1px);
+    linear-gradient(to right, rgba(147, 51, 234, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(147, 51, 234, 0.10) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
-/* Light-theme grid: faint purple lines for use on off-white surfaces */
+/* Light-theme grid: faint blue lines for use on white surfaces */
 .grid-bg-light {
   background-image:
-    linear-gradient(to right, rgba(124, 58, 237, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(124, 58, 237, 0.06) 1px, transparent 1px);
+    linear-gradient(to right, rgba(147, 51, 234, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(147, 51, 234, 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
@@ -145,9 +242,124 @@ body {
   100% { background-position: 200% 0; }
 }
 
+/* ----- Hero: aurora mesh + premium polish ------------------------- */
+
+/* Soft drifting colour fields — slow, organic, eye-comfortable.
+   Each blob takes a different path so the mesh never looks looped. */
+@keyframes aurora-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%      { transform: translate3d(6%, -4%, 0) scale(1.12); }
+  66%      { transform: translate3d(-4%, 5%, 0) scale(0.94); }
+}
+@keyframes aurora-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  40%      { transform: translate3d(-7%, 4%, 0) scale(1.1); }
+  75%      { transform: translate3d(5%, -5%, 0) scale(0.92); }
+}
+@keyframes aurora-c {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.05); }
+  50%      { transform: translate3d(4%, 6%, 0) scale(0.9); }
+}
+.animate-aurora-a { animation: aurora-a 22s ease-in-out infinite; }
+.animate-aurora-b { animation: aurora-b 28s ease-in-out infinite; }
+.animate-aurora-c { animation: aurora-c 25s ease-in-out infinite; }
+
+/* Very slow conic spotlight sweep behind the headline */
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.animate-spin-slow { animation: spin-slow 48s linear infinite; }
+
+/* Gentle floating drift, larger amplitude than .animate-float */
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50%      { transform: translateY(-22px) translateX(8px); }
+}
+.animate-float-soft { animation: float-soft 11s ease-in-out infinite; }
+
+/* On-load entrance — content rises and fades in. Stagger with inline
+   animation-delay. Starts hidden, settles to its natural position. */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-rise {
+  opacity: 0;
+  animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Soft breathing dot for the live status badge */
+@keyframes ping-soft {
+  0%        { transform: scale(1); opacity: 0.55; }
+  70%, 100% { transform: scale(2.4); opacity: 0; }
+}
+.animate-ping-soft { animation: ping-soft 2.4s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+/* Frosted-glass surface for chips / badges on the light hero */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+}
+
+/* ----- Premium motion: living gradients, button shine, link line -- */
+
+/* Slow drifting gradient — gives the hero / header bands a living feel */
+@keyframes gradient-drift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.animate-gradient-bg {
+  background-size: 220% 220%;
+  animation: gradient-drift 18s ease-in-out infinite;
+}
+
+/* Light sweep across primary buttons on hover (::before stays under the
+   button text, so the label is never obscured). */
+.btn-gradient {
+  position: relative;
+  overflow: hidden;
+}
+.btn-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 28%, rgba(255, 255, 255, 0.4) 50%, transparent 72%);
+  transform: translateX(-130%);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.btn-gradient:hover::before {
+  transform: translateX(130%);
+}
+
+/* Animated underline for navigation links */
+.nav-underline {
+  position: relative;
+}
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.35rem;
+  height: 2px;
+  width: 0;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--color-brand), var(--color-accent));
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-underline:hover::after {
+  width: 55%;
+  left: 22.5%;
+}
+
 /* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .animate-float, .animate-grid, .animate-marquee, .animate-marquee-reverse, .animate-pulse-glow { animation: none; }
+  .animate-float, .animate-grid, .animate-marquee, .animate-marquee-reverse,
+  .animate-pulse-glow, .animate-aurora-a, .animate-aurora-b, .animate-aurora-c,
+  .animate-spin-slow, .animate-float-soft, .animate-ping-soft,
+  .animate-gradient-bg { animation: none; }
+  .animate-rise { opacity: 1; transform: none; animation: none; }
+  .text-gradient { animation: none; }
+  .btn-gradient::before, .nav-underline::after { transition: none; }
   html { scroll-behavior: auto; }
 }

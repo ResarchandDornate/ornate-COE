@@ -1,13 +1,19 @@
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Reveal from "../components/Reveal";
 import About from "../components/About";
+import AboutSimple from "../components/AboutSimple";
+import FounderProfile from "../components/FounderProfile";
+import CentreVideo from "../components/CentreVideo";
+import Collaborators from "../components/Collaborators";
 import Objectives from "../components/Objectives";
-import SectionHeading from "../components/SectionHeading";
+import Roadmap from "../components/Roadmap";
 
 export const metadata = {
-  title: "About — B.K. Bhattacharyya Centre of Excellence",
+  title: "Centre of Excellence — B.K. Bhattacharyya Centre of Excellence",
   description:
-    "About the B.K. Bhattacharyya Centre of Excellence — our vision, mission and the strategic objectives behind our indigenous power-electronics R&D.",
+    "The B.K. Bhattacharyya Centre of Excellence in Power Electronics & Clean Energy Systems at Ornate Solar — our vision, mission and the indigenous R&D behind a reusable power-conversion platform.",
 };
 
 export default function AboutPage() {
@@ -15,23 +21,73 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main>
-        {/* Dark banner — keeps the navbar readable and holds the page title */}
-        <section className="relative overflow-hidden bg-navy text-white">
-          <div className="absolute inset-0 bg-linear-to-br from-[#0c0720] via-[#1a0f38] to-[#2c1860]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_50%,rgba(168,85,247,0.30),transparent_55%)]" />
-          <div className="absolute inset-0 grid-bg opacity-15" />
-          <div className="relative z-10 mx-auto max-w-7xl px-5 pb-16 pt-32 sm:pb-20 sm:pt-40 lg:px-8">
-            <SectionHeading
-              light
-              eyebrow="About Us"
-              title="A centre built for indigenous power electronics"
-              subtitle="Researching, designing, prototyping and commercializing advanced power electronics and clean energy systems — all engineered in-house in India."
-            />
+        {/* Hero — text + professor image, clean background */}
+        <section className="bg-white pt-28 pb-14 sm:pt-36 sm:pb-20">
+          <div className="mx-auto max-w-7xl px-5 lg:px-8">
+            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+              {/* Text */}
+              <Reveal>
+                <span className="inline-block rounded-full bg-brand/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-dark sm:text-xs">
+                  Centre of Excellence
+                </span>
+                <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-navy-800 sm:text-5xl lg:text-6xl">
+                  Professor B.K. <span className="text-gradient">Bhattacharyya</span>
+                </h1>
+                <p className="mt-4 text-sm font-semibold uppercase tracking-widest text-slate-500 sm:text-base">
+                  Power Electronics &amp; Clean Energy Systems · at Ornate Solar
+                </p>
+                <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-700">
+                  Researching, designing and commercialising advanced power electronics —
+                  inverters, solar pump controllers and clean energy systems — entirely through
+                  indigenous design, bridging academia and industry to power India&apos;s clean
+                  energy transformation.
+                </p>
+                <div className="mt-7 flex flex-wrap gap-4">
+                  <a
+                    href="/platform"
+                    className="btn-gradient rounded-full px-6 py-3 text-sm font-semibold shadow-lg shadow-brand/30 transition-transform hover:scale-105"
+                  >
+                    Explore the platform
+                  </a>
+                  <a
+                    href="/team"
+                    className="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-navy-800 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:bg-slate-50"
+                  >
+                    Meet the team
+                  </a>
+                </div>
+              </Reveal>
+
+              {/* Image */}
+              <Reveal delay={120}>
+                <div className="relative mx-auto w-full max-w-sm">
+                  <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl shadow-brand/10">
+                    <Image
+                      src="/Gemini_Generated_Image_gnm295gnm295gnm2.png"
+                      alt="Professor Bidyut Kumar Bhattacharyya"
+                      width={600}
+                      height={750}
+                      priority
+                      sizes="(max-width: 1024px) 24rem, 24rem"
+                      className="aspect-4/5 w-full object-cover object-top"
+                    />
+                  </div>
+                  <span className="btn-gradient absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-5 py-2 text-xs font-semibold text-white shadow-lg shadow-brand/30">
+                    Professor Bidyut Kumar
+                  </span>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </section>
 
         <About />
+        <AboutSimple />
         <Objectives />
+        <Roadmap />
+        <FounderProfile />
+        <CentreVideo />
+        <Collaborators />
       </main>
       <Footer />
     </>

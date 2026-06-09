@@ -4,15 +4,13 @@
 // ---------------------------------------------------------------------------
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/#home" },
-  { label: "About", href: "/about" },
+  { label: "Home", href: "/" },
   { label: "Platform", href: "/platform" },
+  { label: "Centre of Excellence", href: "/about" },
+  { label: "Capability", href: "/capability" },
   { label: "Achievements", href: "/achievements" },
   { label: "Patents", href: "/patents" },
-  { label: "Roadmap", href: "/#roadmap" },
   { label: "Team", href: "/team" },
-  { label: "Gallery", href: "/#gallery" },
-  { label: "Partners", href: "/#partners" },
 ];
 
 // Gallery — candid team & lab photos. Files live in /public/team.
@@ -33,7 +31,16 @@ export const VISION =
   "To be a globally recognized center for indigenous power electronics innovation — leading India's clean energy transformation through world-class, self-reliant engineering.";
 
 export const MISSION =
-  "To research, design, prototype, and commercialize advanced power electronics — inverters, solar pump controllers, and clean energy systems — entirely through indigenous design, bridging academia and industry.";
+  "To research, design, prototype and commercialize an indigenous power-conversion platform — one reusable control core spanning solar inverters, battery energy storage (BESS), EV fast charging, microgrid converters and solid-state transformers — built entirely through indigenous design, bridging academia and industry.";
+
+// The application areas the platform powers — shown in the Vision/Mission section.
+export const VM_APPLICATIONS = [
+  { name: "Solar inverters", desc: "Residential to utility scale" },
+  { name: "Battery storage (BESS)", desc: "Bi-directional power conversion" },
+  { name: "EV DC fast charging", desc: "Grid-tied, bi-directional" },
+  { name: "Microgrids & hybrid", desc: "Grid-forming control" },
+  { name: "Solid-state transformers", desc: "Next-generation grid hardware" },
+];
 
 export const OBJECTIVES = [
   {
@@ -186,7 +193,7 @@ export const TEAM = [
     name: "Dr. Ritika Agarwal",
     role: "Senior Engineer — EE Wing",
     img: "/Ritika_pic.jpeg",
-    bio: "Senior engineer with a PhD in Power Electronics from Thapar. Designs 3 kW and 6 kW grid-tied solar inverters and isolated SMPS, with research in multilevel inverters and EV charging.",
+    bio: "Senior engineer with a PhD in Power Electronics from Thapar Institute of Engineering & Technology. She specializes in the design, development and implementation of high-efficiency power electronic systems — 3 kW and 6 kW grid-tied solar inverters, isolated SMPS solutions and advanced power-conversion architectures. Her expertise spans renewable-energy integration, inverter design, PCB development, embedded control systems, multilevel inverters and EV charging.",
   },
   {
     name: "Dr. Kanchan Bala Rai",
@@ -196,15 +203,15 @@ export const TEAM = [
   },
   {
     name: "Akankshi Trivedi",
-    role: "Power Electronics Engineer",
+    role: "Research Scholar — IIT Delhi & Power Electronics R&D Engineer",
     img: "/akanshi.png",
-    bio: "PhD candidate at IIT Delhi designing transformer-less single-phase PV grid-tied inverters with DQ cascaded control and SiC-based high-efficiency stages.",
+    bio: "Research scholar at IIT Delhi and power electronics R&D engineer with over 2 years of experience in the design, modeling, control and hardware testing of power electronic converters.",
   },
   {
     name: "Pravesh Kumar",
-    role: "Inverter Testing Engineer",
+    role: "Senior Hardware Testing Engineer",
     img: "/pravesh.png",
-    bio: "Inverter testing engineer handling soldering and circuit assembly, sensor-circuit test and calibration, and hybrid-inverter performance testing, alongside R&D BOM management.",
+    bio: "Senior hardware testing engineer with extensive experience in the assembly, testing and validation of power electronic systems. He specializes in PCB soldering, circuit assembly, sensor-circuit testing and calibration, and comprehensive performance evaluation of solar and hybrid inverter platforms. His work spans hardware troubleshooting, functional and reliability testing, system validation and performance optimization — alongside R&D support through BOM management, component verification and prototype evaluation.",
   },
   {
     name: "Gaurav Kumar",
@@ -220,9 +227,9 @@ export const TEAM = [
   },
   {
     name: "Akash Yadav",
-    role: "R&D Engineer",
+    role: "Hardware Engineer",
     img: "/akash.png",
-    bio: "Electrical engineer working on boost converters, component characterization and inverter testing in the R&D lab.",
+    bio: "Electrical hardware engineer with expertise in power-converter development, inverter testing and debugging, and hardware design. Experienced with MATLAB, LTspice and Altium, and in electronic component selection for efficient system performance.",
   },
   {
     name: "Kashyap Masiwal",
@@ -232,15 +239,15 @@ export const TEAM = [
   },
   {
     name: "Ankit Kumar",
-    role: "Hardware Test & BOM Engineer",
+    role: "Hardware Testing Engineer",
     img: "/ankit.jpeg",
-    bio: "Electrical engineer handling functional testing and fault diagnosis of hardware circuit boards, BOM maintenance and vendor coordination for the grid-tied solar inverter development pipeline.",
+    bio: "Hardware testing engineer specializing in the validation, testing and troubleshooting of power electronic systems and embedded hardware — functional testing, fault diagnosis, performance evaluation and reliability verification of circuit boards for grid-tied solar inverters. His expertise spans test planning and execution, PCB and schematic review, BOM management, component verification and coordination with vendors and manufacturing teams.",
   },
   {
     name: "Aditya Kumar Agarhari",
-    role: "Power Electronics & PCB Engineer",
+    role: "R&D Electrical Engineer",
     img: "/Aditya_pic.jpeg",
-    bio: "Power electronics and PCB design engineer skilled in Altium and KiCad. Works on BOM development, motor-driver and voltage-regulator circuits, and R&D patent documentation for power-conversion systems.",
+    bio: "R&D electrical engineer specializing in power electronics, PCB design, BOM management and technical documentation. Passionate about developing reliable electrical solutions for renewable-energy and industrial applications.",
   },
   {
     name: "Tamnna Ameri",
@@ -312,6 +319,81 @@ export const PLATFORM_WHY = [
     body: "Every product built on the platform stress-tests its control architecture under new conditions, and each cycle hardens it further. This compounding is impossible with a single-product strategy.",
   },
 ];
+
+// ---------------------------------------------------------------------------
+//  Innovation engine — the research-driven platform that lets us build advanced
+//  power-electronics solutions in a fraction of the usual time. Reused across
+//  Home, Platform and Achievements (each page shows a chosen subset of blocks).
+// ---------------------------------------------------------------------------
+export const INNOVATION_ENGINE = {
+  eyebrow: "Innovation, Not Just A Product",
+  title: "A research platform built to innovate faster",
+  subtitle:
+    "This is not a single product — it is a technology foundation, built from our own R&D, that lets us develop advanced power-electronics solutions in a fraction of the time a ground-up build would take. The hard engineering is done once and re-used across every product.",
+
+  // Why the platform accelerates development — the reuse advantage, stated plainly.
+  accelerators: [
+    {
+      value: "70–80%",
+      label: "Engineering re-used",
+      body: "The hardest part of a new product — grid synchronisation, control loops, protection logic — is already built and validated. A new product retunes it rather than rebuilding it.",
+    },
+    {
+      value: "Re-target",
+      label: "Not restart",
+      body: "One proven control core is re-targeted across five product classes instead of starting from a blank page each time. Development becomes adaptation, not invention.",
+    },
+    {
+      value: "Compounds",
+      label: "Every cycle",
+      body: "Each product built on the platform stress-tests and hardens it — so every new solution starts from a stronger, more proven base than the last.",
+    },
+  ],
+
+  // The hard problems we solved — and, in plain terms, how. Drawn from the real
+  // engineering behind the 3 kW inverter.
+  challenges: [
+    {
+      title: "Staying locked to a shifting grid",
+      problem: "The Indian grid's voltage and frequency drift constantly; a converter that loses sync trips or injects bad power.",
+      solved: "Two independent grid-synchronisation methods (orthogonal and non-orthogonal), holding 99.5% power factor under weak-grid swings.",
+    },
+    {
+      title: "Electrical noise & displacement current",
+      problem: "High-speed switching radiates common-mode and differential-mode noise that breaks EMI compliance and corrupts measurement.",
+      solved: "A dense, field-cancelling layout plus targeted noise-suppression — keeping the unit small, quiet and compliant.",
+    },
+    {
+      title: "Failing safe, every time",
+      problem: "A grid-tied inverter must survive faults, surges and abnormal conditions without damage or hazard.",
+      solved: "Protection logic covering 30+ distinct fault and abnormal-condition cases, so the unit always fails to a safe state.",
+    },
+    {
+      title: "Cooling without moving parts",
+      problem: "Fans wear out and fail in dusty, hot rural environments — the worst place for a service call.",
+      solved: "Mechanical integration tuned for natural (fanless) convection in a compact enclosure, rated −30 °C to +60 °C.",
+    },
+  ],
+
+  // The reusable building blocks we have already built — the platform itself.
+  frameworks: [
+    { name: "Grid-sync library", desc: "PLL / SOGI / dq-PLL / DDSRF — locks onto the grid under real Indian conditions." },
+    { name: "Control-loop framework", desc: "Inner current (PI / PR, dq vector) and outer P/Q loops, retuned per product." },
+    { name: "Protection engine", desc: "30+ fault and abnormal-condition cases as reusable, configurable safety logic." },
+    { name: "MPPT module", desc: "Stable maximum-power tracking that never collapses under positive feedback." },
+    { name: "PWM & switching", desc: "SVPWM, dead-time and modulation logic shared across topologies." },
+    { name: "Comms layer", desc: "Modbus, CAN and OCPP-ready telemetry for monitoring and integration." },
+  ],
+
+  // What this foundation lets us build next — future solutions on top of it.
+  future: [
+    { name: "BESS power conversion", desc: "Bi-directional storage conversion — the same core plus a battery interface and SoC-aware logic." },
+    { name: "EV DC fast charging", desc: "The grid-tied front-end is structurally the same converter; add isolated DC/DC and charging protocols." },
+    { name: "Grid-forming microgrids", desc: "Solar-plus-battery hybrids with seamless transfer between grid-tied and islanded operation." },
+    { name: "Utility-scale (10 MW)", desc: "Multilevel NPC / MMC topologies driven by the same control discipline, scaled to megawatts." },
+    { name: "Solid-state transformers", desc: "A power-electronics replacement for conventional transformers, sharing the bi-directional core." },
+  ],
+};
 
 // Achievements — milestone cards (image + description) for the /achievements page.
 // `placeholder: true` renders a branded block instead of a photo (drop in a real
@@ -427,6 +509,270 @@ export const PLATFORM_CLASSES = [
     relevance: "Emerging category for grid modernisation; significant strategic value.",
   },
 ];
+
+// ---------------------------------------------------------------------------
+//  Engineering deep-dive — what went into the 3 kW grid-tied inverter.
+//  Written in plain language so a non-specialist can follow it.
+// ---------------------------------------------------------------------------
+export const INVERTER_BUILD = {
+  milestone: "On 22 May 2026, Ornate submitted its first 3 kW grid-tied inverter for BIS type-testing.",
+  intro:
+    "An inverter turns the DC power from solar panels into the AC power your home and the grid use. Building one that is safe, efficient and grid-compliant is hard — and apart from the semiconductor chips and magnetic parts, our team designed and engineered nearly every subsystem of this one in-house.",
+  // The major subsystems, each explained simply.
+  build: [
+    {
+      title: "Power boards",
+      body: "The main circuit that handles the high-power conversion — designed as one platform that scales from 3 kW to 5 kW.",
+      owner: "Argha (IIT Bombay, PhD) — Chief Architect",
+    },
+    {
+      title: "Dual-source SMPS",
+      body: "The internal power supply that runs the electronics — engineered to work from either the solar panel side or the grid side.",
+      owner: "Argha",
+    },
+    {
+      title: "Control firmware",
+      body: "Two independent grid-following control strategies that keep the inverter's output locked to the grid.",
+    },
+    {
+      title: "Embedded software",
+      body: "Two different methods to solve grid synchronisation — staying perfectly in step with the grid's voltage and phase.",
+    },
+    {
+      title: "Protection systems",
+      body: "Safety logic covering more than 30 different fault and abnormal-condition cases, so the unit fails safe every time.",
+    },
+    {
+      title: "Compact system architecture",
+      body: "A dense, robust layout that cancels stray power- and ground-field interference — letting the unit stay small and strong.",
+      owner: "Ritika — layout expert",
+    },
+    {
+      title: "Noise elimination",
+      body: "Methods to suppress common-mode and differential-mode electrical noise tied to displacement current — cleaner, quieter power.",
+    },
+    {
+      title: "Natural (fanless) cooling",
+      body: "Mechanical integration for a small, compact unit that cools itself without fans — fewer moving parts to wear out.",
+    },
+    {
+      title: "EMI / EMC layout",
+      body: "Board layout tuned to control electromagnetic emissions, plus AC-side and earth-leakage current management for compliance.",
+    },
+    {
+      title: "Smart MPPT",
+      body: "Maximum-power-point tracking tuned so the current-control loops stay stable and never collapse under positive feedback.",
+      owner: "Akankshi & Gaurav (stability); Arindam & Kanchan (power-search)",
+    },
+  ],
+  // Headline performance numbers, lab-measured.
+  metrics: [
+    { value: "99.5%", label: "Power factor", note: "Two software methods — orthogonal & non-orthogonal" },
+    { value: "~5–6%", label: "THD at full 3 kW", note: "≈4.5% at night, in our lab" },
+    { value: "30+", label: "Protection cases", note: "Fail-safe coverage" },
+    { value: "3–5 kW", label: "Power-board range", note: "One scalable design" },
+  ],
+};
+
+// Utility-scale roadmap — moving from kilowatts to megawatts (10 MW).
+export const UTILITY_SCALE = {
+  intro:
+    "The same engineering discipline scales up. For utility-scale power — think 10 MW for large solar farms — the inverter is built from one of two advanced multilevel topologies. Here is what they are, in plain terms.",
+  img: "/platform/npc-mmc-topologies.png",
+  imgCaption: "NPC vs MMC — the two candidate multilevel topologies for the 10 MW platform.",
+  topologies: [
+    {
+      name: "NPC — Neutral Point Clamped",
+      sub: "3-level inverter",
+      points: [
+        "Uses clamping diodes to create three voltage levels instead of two (+Vdc/2, 0, −Vdc/2).",
+        "Smoother output: lower dv/dt and lower distortion (THD) than a basic 2-level design.",
+        "Proven in medium- and high-power solar inverters, motor drives and STATCOMs.",
+      ],
+    },
+    {
+      name: "MMC — Modular Multilevel Converter",
+      sub: "Many-level, modular",
+      points: [
+        "Built from many identical submodules in series — each adds its own small voltage step.",
+        "Many small steps stack into a near-perfect sine wave: very low THD at low switching frequency.",
+        "The choice for the largest systems — HVDC links, FACTS and big renewable plants.",
+      ],
+    },
+  ],
+  note:
+    "The final switching scheme — NPC or MMC — will be locked once the 10 MW power board, with its heatsinks and forced-air cooling, is built and characterised on the bench.",
+};
+
+// ===========================================================================
+//  THE PLATFORM STORY — from the MeitY institutional submission.
+//  Written in plain language: the platform and where it applies come first,
+//  the 3 kW inverter is the first proof-point.
+// ===========================================================================
+
+// In-depth, original narrative of the platform concept — the core idea of the
+// whole Centre, explained fully rather than summarised.
+export const PLATFORM_STORY = {
+  lead:
+    "At its heart, this Centre is not building a single device — it is building a platform. That one distinction shapes everything: how the work is valued, how it scales, and how defensible it becomes. A product is something you design, sell, and then largely rebuild for the next requirement. A platform is the accumulated engineering that sits underneath many products — the part that is designed once, hardened over years of real use, and then re-used again and again. The 3 kW inverter you can hold today is simply the first thing the platform produced. The platform itself is the asset that will produce the next ten.",
+  sections: [
+    {
+      no: "01",
+      heading: "What we actually mean by a “platform”",
+      paras: [
+        "It helps to borrow an analogy. A car manufacturer does not design a brand-new engine for every model it sells. It designs one strong engine platform and adapts it — different tuning, different housings, different outputs — across an entire range of vehicles. We do exactly this for grid-connected power electronics: one proven control core, re-targeted across many different machines.",
+        "Crucially, our platform is not a casing or a circuit board you can point to. It is the firmware-defined control intelligence — the algorithms and the software architecture that decide, thousands of times every second, how electrical energy is measured, shaped, synchronised and protected as it flows between solar panels, batteries, vehicles and the grid. It is the brain, not the body.",
+      ],
+    },
+    {
+      no: "02",
+      heading: "Why the value lives in software, not steel",
+      paras: [
+        "Every power-conversion product has two halves. There is the power stage — the heavy, visible hardware of switches, magnetics and capacitors — and there is the control stack, the firmware that actually drives it. The hardware is increasingly a commodity: components can be bought off the shelf, and a great many factories can assemble a competent board.",
+        "The genuinely hard, scarce and defensible part is the control stack. It must keep the system perfectly in step with a grid whose voltage and frequency are constantly drifting; squeeze maximum energy out of the sun as clouds pass overhead; ride through faults and disturbances without tripping or damaging anything; and do all of this safely, within strict grid codes, in real time with no margin for a missed deadline. This is the layer where years of engineering quietly accumulate — and it is the layer that is hardest for anyone else to copy.",
+      ],
+    },
+    {
+      no: "03",
+      heading: "How one core becomes many products",
+      paras: [
+        "The control intelligence that runs a rooftop solar inverter is, in large part, the very same intelligence a battery storage system, an EV fast charger or a microgrid converter needs. These products differ in their hardware ratings and their application rules — but the core beneath them, the grid synchronisation, the current control, the protection logic, is shared.",
+        "So extending the platform to a new product is not starting from a blank page. It is keeping the proven core intact, retuning a handful of layers, and adding the application-specific pieces on top — a battery interface here, a charging standard there. In practice, a new product can reuse the majority of the hardest engineering that already exists. That is what turns a single success into a portfolio.",
+      ],
+    },
+    {
+      no: "04",
+      heading: "A platform that compounds with every product",
+      paras: [
+        "There is a second, quieter advantage. Every product built on the platform is also a stress-test of it. New ratings, new grids and new field conditions surface new edge cases; solving them hardens the core for everything that comes afterwards. The platform does not merely stay still and get re-used — it gets measurably better each cycle.",
+        "Over time this compounds into something a one-off product strategy can never reach: a control architecture that has been proven across more conditions, more deployments and more failure modes than any single device ever could. The longer it runs, the harder it is to catch.",
+      ],
+    },
+    {
+      no: "05",
+      heading: "Why this matters for India",
+      paras: [
+        "India is learning, rapidly and successfully, to assemble power-electronics hardware at home. But the control intelligence inside that hardware — the firmware that actually governs how the equipment, and through it the grid, behaves — is still very largely imported. As the energy system becomes electronics-led, with every solar farm, battery and charger connecting through an inverter, the behaviour of the national grid increasingly depends on software authored somewhere else.",
+        "True self-reliance has to reach that layer. An indigenous, sovereign control platform is not only an industrial achievement; it is energy-security infrastructure. Owning the control layer means owning how the country's clean-energy backbone responds, stabilises and recovers — and that is precisely the capability this platform is built to give India.",
+      ],
+    },
+  ],
+  pullQuote: "Own the control layer, and you own the future of the grid.",
+};
+
+// At-a-glance — the whole story in four parts, before the detail. (PPT p.3)
+export const PLATFORM_GLANCE = {
+  intro:
+    "Three years. One platform. A first product. National recognition. Here is the whole story in four parts — before the detail.",
+  pillars: [
+    {
+      tag: "The platform",
+      title: "An indigenous control “brain” for power electronics",
+      body: "A reusable, software-defined control stack — the part that locks onto the grid, tracks solar power, runs the safety logic and talks to the outside world. Built and validated in India.",
+      highlight: true,
+    },
+    {
+      tag: "The first product",
+      title: "3 kW grid-tied solar inverter — field-validated",
+      body: "Ready and tested under real Indian grid conditions: anti-islanding, grid-code compliant, MPPT-enabled, with heat performance proven for Indian environments.",
+      highlight: false,
+    },
+    {
+      tag: "Government recognition",
+      title: "DSIR-recognised in-house R&D unit",
+      body: "Recognised by the Department of Scientific and Industrial Research — the only national scheme that formally benchmarks industrial R&D in India.",
+      highlight: false,
+    },
+    {
+      tag: "The potential",
+      title: "Extends to five product classes",
+      body: "The same core can power solar inverters of every size, battery storage, EV fast chargers, microgrids and solid-state transformers — each with extra application engineering.",
+      highlight: true,
+    },
+  ],
+};
+
+// The seven-layer architecture — five travel, two don't. (PPT p.8)
+export const PLATFORM_LAYERS = {
+  intro:
+    "Think of the technology as seven layers stacked on top of each other. The top five are software — they carry across from one product to the next and hold almost all the valuable know-how. The bottom two are physical hardware, rebuilt for each product.",
+  layers: [
+    { n: 1, name: "What the product does", does: "Decides the product's behaviour — tracking the sun's power, staying safe, scheduling and talking to the outside world.", travels: "Yes", note: "Used as-is", ip: "high" },
+    { n: 2, name: "The big-picture controller", does: "Sets the overall targets: how much power to deliver and how to hold the voltages steady.", travels: "Yes", note: "Same logic everywhere", ip: "high" },
+    { n: 3, name: "The fast reflexes", does: "The split-second inner loop that shapes the electrical current smoothly and accurately.", travels: "Mostly", note: "Lightly re-tuned", ip: "high" },
+    { n: 4, name: "Switching & safety", does: "Turns the power switches on and off with precise timing — and trips instantly the moment something goes wrong.", travels: "Mostly", note: "Same structure", ip: "high" },
+    { n: 5, name: "Staying in step with the grid", does: "Locks onto the grid's rhythm so our power flows in perfect time with it.", travels: "Mostly", note: "Same approach", ip: "high" },
+    { n: 6, name: "The power muscle", does: "The heavy components that actually carry the power — switches, filters and transformers.", travels: "No", note: "Rebuilt per size", ip: "low" },
+    { n: 7, name: "Cooling, casing & noise", does: "Keeping it cool, housing it safely, and keeping electrical noise in check.", travels: "No", note: "Rebuilt per product", ip: "low" },
+  ],
+  note:
+    "The top five layers are the software — roughly 70–80% of the work and almost all of the valuable, hard-to-copy know-how. This is the part India must own.",
+};
+
+// Why it matters nationally — electronics-led transition + the strategic gap. (PPT p.12–13)
+export const PLATFORM_NATIONAL = {
+  intro:
+    "India's energy transition is becoming electronics-led — power-conversion equipment is now the control gateway between every renewable source, every battery and every load.",
+  shifts: [
+    { title: "Generation is electronics-interfaced", body: "Solar, wind, batteries and EV chargers all connect through inverters. The grid's behaviour is now set by inverter control software." },
+    { title: "Storage is moving to the centre", body: "41.65 GW / 208 GWh of battery storage targeted by 2030 (CEA). Every gigawatt-hour needs bi-directional power conversion." },
+    { title: "EV charging is a new grid layer", body: "PM E-DRIVE targets 72,300 stations. Each DC fast charger is a grid-tied bi-directional converter." },
+    { title: "Grid modernisation is software-defined", body: "Grid-forming, virtual synchronous machines and ancillary services are all delivered by embedded software inside power electronics." },
+  ],
+  gapLine:
+    "The strategic gap: India increasingly assembles the hardware at home — but the control “brain” inside is still imported.",
+  doesNow: {
+    title: "What India does today",
+    items: [
+      "Assembles power-conversion hardware domestically",
+      "PLI for solar PV modules and battery cells",
+      "Local-content rules in renewable tenders",
+      "A growing electronics manufacturing base",
+    ],
+  },
+  imported: {
+    title: "What is still imported",
+    items: [
+      "The embedded firmware on MCU / DSP / DSC chips",
+      "Grid-sync, current-control and protection logic",
+      "Validation methods and reference designs",
+      "System-level design know-how",
+    ],
+  },
+  closing:
+    "True self-reliance must go beyond local assembly. India must own the embedded control architecture at the heart of modern power equipment — and that is exactly what this platform is.",
+};
+
+// Designed for Indian deployment realities. (PPT p.9)
+export const INDIAN_CONDITIONS = {
+  intro:
+    "Imported control systems are tuned for the grids of their home countries. Indian conditions are different — so the platform was designed and validated for them from the start.",
+  items: [
+    { title: "Weak-grid behaviour", body: "Handles voltage and frequency swings well beyond what designs for stronger grids assume." },
+    { title: "Heat & climate", body: "High ambient temperatures, dust and humidity demand thermal derating and proper ingress protection for Indian weather." },
+    { title: "Rural feeder instability", body: "Stays stable on unstable rural distribution lines — something temperate-climate designs can't assume." },
+    { title: "C&I power quality", body: "Robust under local distortion, switching transients and reactive-power conditions in commercial and industrial settings." },
+    { title: "CEA grid-code compliance", body: "Built to CEA Technical Standards (2019) and emerging fault-ride-through / reactive-support rules — compliance designed in." },
+    { title: "Serviceability & cost", body: "Field-replaceable design, simpler diagnostics and trade-offs that reflect Indian deployment economics." },
+  ],
+};
+
+// Aligned with national programmes. (PPT p.15)
+export const NATIONAL_PROGRAMS = {
+  intro: "The indigenous control layer connects directly to the country's major missions and programmes.",
+  items: [
+    { name: "Aatmanirbhar Bharat", body: "Indigenous ownership of a strategically important control layer." },
+    { name: "Make in India", body: "High-value engineering and IP creation — not assembly alone." },
+    { name: "PLI — ACCs & solar PV", body: "Extends the value chain from cells and modules into the power electronics on top." },
+    { name: "Renewable energy expansion", body: "The 500 GW non-fossil target needs sovereign inverter-control capability." },
+    { name: "BESS deployment", body: "Indigenous PCS technology for 208 GWh of battery storage by 2030." },
+    { name: "PM E-DRIVE", body: "Indigenous control for EV DC fast-charging infrastructure." },
+    { name: "PM-KUSUM", body: "Indigenous VFD platform for solar pumps at agricultural scale." },
+    { name: "Grid modernisation", body: "Grid-forming, grid-supportive and ancillary-services power electronics." },
+    { name: "Energy security", body: "Trusted indigenous control of critical infrastructure." },
+    { name: "ESDM & electronics", body: "Embedded-systems engineering underpinning higher-value manufacturing." },
+  ],
+};
 
 // ---------------------------------------------------------------------------
 //  Patents — the granted IP of Prof. Bidyut K. Bhattacharyya.

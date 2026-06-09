@@ -49,7 +49,7 @@ export default function Partners() {
           {PILLARS.map((p, i) => (
             <Reveal key={p.title} delay={i * 120}>
               <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-brand/20 sm:rounded-3xl sm:p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-brand to-accent text-white shadow-lg shadow-brand/30 transition-all duration-300 group-hover:scale-110 group-hover:from-brand-dark group-hover:to-brand sm:h-14 sm:w-14 sm:rounded-2xl">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand shadow-lg shadow-brand/30 transition-all duration-300 group-hover:scale-110 group-hover:from-brand-dark group-hover:to-brand sm:h-14 sm:w-14 sm:rounded-2xl">
                   <Icon name={p.icon} />
                 </div>
                 <span className="mt-5 inline-block text-[10px] font-semibold uppercase tracking-widest text-brand-dark sm:mt-6 sm:text-xs">

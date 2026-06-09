@@ -4,7 +4,7 @@ import { PLATFORM_WHY } from "../data";
 
 export default function PlatformWhy() {
   return (
-    <section className="bg-[#faf8fe] py-16 sm:py-28">
+    <section className="bg-[#f3f7fc] py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="The Direction"

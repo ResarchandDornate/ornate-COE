@@ -5,13 +5,30 @@ import { useEffect, useRef } from "react";
 // Animated constellation backdrop: drifting nodes linked by fading lines,
 // with a subtle pull toward the pointer. Pure canvas, no deps.
 // Honors prefers-reduced-motion by rendering a single static frame.
-export default function ParticleField() {
+export default function ParticleField({ light = false }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
+
+    // Colour palette — tuned for a light or dark backdrop.
+    const C = light
+      ? {
+          link: (op) => `rgba(234, 88, 12, ${op * 0.8})`,
+          pointer: (op) => `rgba(244, 63, 94, ${op})`,
+          node: "rgba(234, 88, 12, 0.85)",
+          glow: "rgba(234, 88, 12, 0.45)",
+          glowBlur: 4,
+        }
+      : {
+          link: (op) => `rgba(96, 165, 250, ${op})`,
+          pointer: (op) => `rgba(125, 211, 252, ${op})`,
+          node: "rgba(224, 242, 255, 0.92)",
+          glow: "rgba(234, 88, 12, 0.9)",
+          glowBlur: 6,
+        };
 
     const DPR = Math.min(window.devicePixelRatio || 1, 2);
     const LINK_DIST = 140;
@@ -57,7 +74,7 @@ export default function ParticleField() {
           const dist = Math.hypot(dx, dy);
           if (dist < LINK_DIST) {
             const op = (1 - dist / LINK_DIST) * 0.4;
-            ctx.strokeStyle = `rgba(192, 132, 252, ${op})`;
+            ctx.strokeStyle = C.link(op);
             ctx.lineWidth = 0.7;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
@@ -72,7 +89,7 @@ export default function ParticleField() {
           const dist = Math.hypot(dx, dy);
           if (dist < POINTER_DIST) {
             const op = (1 - dist / POINTER_DIST) * 0.6;
-            ctx.strokeStyle = `rgba(216, 180, 254, ${op})`;
+            ctx.strokeStyle = C.pointer(op);
             ctx.lineWidth = 0.9;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
@@ -86,9 +103,9 @@ export default function ParticleField() {
       for (const p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(237, 222, 255, 0.92)";
-        ctx.shadowColor = "rgba(168, 85, 247, 0.9)";
-        ctx.shadowBlur = 6;
+        ctx.fillStyle = C.node;
+        ctx.shadowColor = C.glow;
+        ctx.shadowBlur = C.glowBlur;
         ctx.fill();
       }
       ctx.shadowBlur = 0;
@@ -146,7 +163,7 @@ export default function ParticleField() {
       window.removeEventListener("mousemove", onMove);
       window.removeEventListener("mouseout", onLeave);
     };
-  }, []);
+  }, [light]);
 
   return (
     <canvas

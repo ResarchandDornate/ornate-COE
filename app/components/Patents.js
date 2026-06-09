@@ -21,7 +21,7 @@ function ArrowIcon() {
 
 export default function Patents() {
   return (
-    <section className="bg-[#faf8fe] py-16 sm:py-24">
+    <section className="bg-[#f3f7fc] py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Intellectual Property"

@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <div className="leading-tight">
                 <p className="font-display font-bold text-white">
-                  B.K. Bhattacharyya CoE
+                  B.K. Bhattacharyya 
                 </p>
                 <p className="text-xs text-brand">Centre of Excellence</p>
               </div>
@@ -32,6 +32,16 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a href="/first-product" className="transition-colors hover:text-brand">
+                  First Product
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="transition-colors hover:text-brand">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 

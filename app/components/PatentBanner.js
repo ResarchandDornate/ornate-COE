@@ -116,7 +116,7 @@ function Modal({ items, index, onClose, onNav }) {
         <div className="mt-4 max-w-xl text-center">
           <p className="font-mono text-sm font-semibold text-amber-200">{item.number}</p>
           <p className="mt-1 font-display text-base font-bold text-white sm:text-lg">{item.title}</p>
-          <p className="mt-1 text-xs text-purple-200">Date of Patent: {item.date}</p>
+          <p className="mt-1 text-xs text-sky-200">Date of Patent: {item.date}</p>
           <a
             href={item.url}
             target="_blank"
@@ -146,7 +146,7 @@ export default function PatentBanner() {
   );
 
   return (
-    <section className="bg-[#faf8fe] py-16 sm:py-24">
+    <section className="bg-[#f3f7fc] py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Patented Legacy"

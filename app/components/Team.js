@@ -5,7 +5,7 @@ import { TEAM } from "../data";
 
 export default function Team() {
   return (
-    <section id="team" className="bg-[#faf8fe] py-16 sm:py-28">
+    <section id="team" className="bg-[#f3f7fc] py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Our Team"
@@ -20,7 +20,7 @@ export default function Team() {
               delay={(i % 3) * 80}
               className="h-full w-[calc(50%-0.625rem)] sm:w-[calc(33.333%-1rem)]"
             >
-              <div className="group flex h-full flex-col items-center rounded-2xl border-2 border-slate-100 bg-white px-4 py-7 text-center shadow-[0_18px_40px_-18px_rgba(33,17,66,0.30)] transition-all duration-300 hover:-translate-y-2 hover:border-brand hover:shadow-[0_28px_55px_-20px_rgba(124,58,237,0.50)]">
+              <div className="group flex h-full flex-col items-center rounded-2xl border-2 border-slate-100 bg-white px-4 py-7 text-center shadow-[0_18px_40px_-18px_rgba(33,17,66,0.30)] transition-all duration-300 hover:-translate-y-2 hover:border-brand hover:shadow-[0_28px_55px_-20px_rgba(194,65,12,0.50)]">
                 {/* Circular avatar */}
                 <div className="relative h-28 w-28 overflow-hidden rounded-full bg-slate-100 ring-4 ring-slate-100 transition-all duration-300 group-hover:ring-brand/25 sm:h-32 sm:w-32">
                   <Image

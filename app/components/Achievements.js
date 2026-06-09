@@ -21,15 +21,14 @@ function BadgeIcon() {
 // Branded fallback shown until a real photo is supplied.
 function Placeholder({ label }) {
   return (
-    <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-navy">
-      <div className="absolute inset-0 bg-linear-to-br from-[#0c0720] via-[#1a0f38] to-[#2c1860]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(168,85,247,0.32),transparent_55%)]" />
-      <div className="absolute inset-0 grid-bg opacity-15" />
-      <div className="relative flex flex-col items-center px-4 text-center text-white">
-        <span className="text-accent">
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-linear-to-br from-[#eef4fb] to-[#e1ecfb]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(234,88,12,0.10),transparent_55%)]" />
+      <div className="absolute inset-0 grid-bg-light opacity-70" />
+      <div className="relative flex flex-col items-center px-4 text-center">
+        <span className="text-brand">
           <BadgeIcon />
         </span>
-        <span className="mt-2 text-xs font-semibold uppercase tracking-widest text-purple-200">
+        <span className="mt-2 text-xs font-semibold uppercase tracking-widest text-brand-dark">
           {label}
         </span>
       </div>
@@ -39,7 +38,7 @@ function Placeholder({ label }) {
 
 export default function Achievements() {
   return (
-    <section className="bg-[#faf8fe] py-16 sm:py-24">
+    <section className="bg-[#f3f7fc] py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Milestones"

@@ -6,8 +6,10 @@ export default function SectionHeading({ eyebrow, title, subtitle, light = false
     <Reveal className="mx-auto max-w-3xl text-center">
       {eyebrow && (
         <span
-          className={`inline-block rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-widest sm:px-4 sm:text-xs ${
-            light ? "bg-brand/15 text-brand" : "bg-brand/10 text-brand-dark"
+          className={`inline-block rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-widest ring-1 sm:px-4 sm:text-xs ${
+            light
+              ? "bg-white/10 text-accent ring-white/15"
+              : "bg-linear-to-r from-brand/10 to-accent/10 text-brand-dark ring-brand/10"
           }`}
         >
           {eyebrow}
@@ -23,7 +25,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, light = false
       {subtitle && (
         <p
           className={`mt-2.5 text-sm leading-relaxed sm:mt-4 sm:text-base lg:text-lg ${
-            light ? "text-slate-300" : "text-slate-600"
+            light ? "text-slate-300" : "text-slate-700"
           }`}
         >
           {subtitle}

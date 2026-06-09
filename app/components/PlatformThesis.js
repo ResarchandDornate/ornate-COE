@@ -11,9 +11,6 @@ export default function PlatformThesis() {
           <span className="text-gradient block">{PLATFORM_THESIS.line2}</span>
         </h2>
         <span className="mx-auto mt-7 block h-1.5 w-1.5 rounded-full bg-accent" />
-        <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.32em] text-slate-400 sm:text-xs">
-          {PLATFORM_THESIS.caption}
-        </p>
       </Reveal>
     </section>
   );

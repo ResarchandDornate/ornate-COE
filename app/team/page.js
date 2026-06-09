@@ -2,7 +2,8 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Team from "../components/Team";
-import SectionHeading from "../components/SectionHeading";
+import Gallery from "../components/Gallery";
+import PageHero from "../components/PageHero";
 import Reveal from "../components/Reveal";
 
 export const metadata = {
@@ -48,23 +49,14 @@ export default function TeamPage() {
     <>
       <Navbar />
       <main>
-        {/* Dark banner — keeps the navbar readable and holds the page title */}
-        <section className="relative overflow-hidden bg-navy text-white">
-          <div className="absolute inset-0 bg-linear-to-br from-[#0c0720] via-[#1a0f38] to-[#2c1860]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_50%,rgba(168,85,247,0.30),transparent_55%)]" />
-          <div className="absolute inset-0 grid-bg opacity-15" />
-          <div className="relative z-10 mx-auto max-w-7xl px-5 pb-16 pt-32 sm:pb-20 sm:pt-40 lg:px-8">
-            <SectionHeading
-              light
-              eyebrow="Our Team"
-              title="Meet Our Team"
-              subtitle="The visionaries and engineers driving the Centre of Excellence forward."
-            />
-          </div>
-        </section>
+        <PageHero
+          eyebrow="Our Team"
+          title="Meet Our Team"
+          subtitle="The visionaries and engineers driving the Centre of Excellence forward."
+        />
 
         {/* Leadership bio — image left, details right */}
-        <section className="bg-[#faf8fe] py-16 sm:py-24">
+        <section className="bg-white py-16 sm:py-24">
           <div className="mx-auto max-w-6xl px-5 lg:px-8">
             <Reveal>
               <div className="card-gradient grid gap-0 overflow-hidden rounded-3xl border border-slate-200 shadow-[0_24px_55px_-25px_rgba(33,17,66,0.40)] md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]">
@@ -130,7 +122,7 @@ export default function TeamPage() {
             <div className="mt-6 grid gap-6 sm:mt-8 md:grid-cols-2">
               {SUB_LEADS.map((person, i) => (
                 <Reveal key={person.name} delay={i * 120}>
-                  <div className="card-gradient grid h-full grid-cols-1 overflow-hidden rounded-2xl border border-slate-200 shadow-[0_20px_45px_-22px_rgba(33,17,66,0.38)] transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_28px_55px_-22px_rgba(124,58,237,0.45)] sm:grid-cols-[210px_1fr]">
+                  <div className="card-gradient grid h-full grid-cols-1 overflow-hidden rounded-2xl border border-slate-200 shadow-[0_20px_45px_-22px_rgba(33,17,66,0.38)] transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_28px_55px_-22px_rgba(194,65,12,0.45)] sm:grid-cols-[210px_1fr]">
                     {/* Image */}
                     <div className="relative h-64 w-full overflow-hidden bg-slate-100 sm:h-full sm:min-h-[300px]">
                       <Image
@@ -175,6 +167,9 @@ export default function TeamPage() {
 
         {/* Full team grid */}
         <Team />
+
+        {/* Life at the Centre — candid lab & team photos */}
+        <Gallery />
       </main>
       <Footer />
     </>

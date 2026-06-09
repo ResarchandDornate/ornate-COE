@@ -1,11 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "../data";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  const barColor = "bg-navy-800";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -18,17 +25,21 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#faf8fe]/90 backdrop-blur-md shadow-lg shadow-slate-900/5"
+          ? "bg-[#f3f7fc]/90 backdrop-blur-md shadow-lg shadow-slate-900/5"
           : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 lg:px-8">
         <a href="/" className="group flex flex-col leading-tight transition-transform group-hover:scale-105">
-          <span className={`font-display text-base font-extrabold tracking-wide sm:text-lg ${scrolled ? "text-navy-800" : "text-white"}`}>
-            B.K. Bhattacharyya
+          <span
+            className="font-display text-base font-extrabold uppercase tracking-wider text-brand-dark sm:text-lg"
+          >
+            CENTRE OF EXCELLENCE
           </span>
-          <span className={`text-[10px] font-semibold uppercase tracking-wider sm:text-xs ${scrolled ? "text-brand-dark" : "text-purple-200"}`}>
-            Centre of Excellence
+          <span
+            className="text-[10px] font-semibold uppercase tracking-wider text-slate-500 sm:text-xs"
+          >
+            Research &amp; Innovation
           </span>
         </a>
 
@@ -38,10 +49,11 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  scrolled
-                    ? "text-slate-700 hover:bg-slate-100 hover:text-brand-dark"
-                    : "text-purple-100 hover:bg-white/10 hover:text-white"
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`nav-underline rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  isActive(link.href)
+                    ? "bg-brand/10 text-brand-dark"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-brand-dark"
                 }`}
               >
                 {link.label}
@@ -61,19 +73,19 @@ export default function Navbar() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className={`flex h-10 w-10 items-center justify-center rounded-lg lg:hidden ${scrolled ? "text-navy-800" : "text-white"}`}
+          className="flex h-10 w-10 items-center justify-center rounded-lg lg:hidden"
         >
           <div className="space-y-1.5">
-            <span className={`block h-0.5 w-6 transition-transform ${scrolled ? "bg-navy-800" : "bg-white"} ${open ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`block h-0.5 w-6 transition-opacity ${scrolled ? "bg-navy-800" : "bg-white"} ${open ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 w-6 transition-transform ${scrolled ? "bg-navy-800" : "bg-white"} ${open ? "-translate-y-2 -rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 transition-transform ${barColor} ${open ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 transition-opacity ${barColor} ${open ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-6 transition-transform ${barColor} ${open ? "-translate-y-2 -rotate-45" : ""}`} />
           </div>
         </button>
       </nav>
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden border-t border-slate-200 bg-[#faf8fe]/95 backdrop-blur-md transition-[max-height] duration-300 lg:hidden ${
+        className={`overflow-hidden border-t border-slate-200 bg-[#f3f7fc]/95 backdrop-blur-md transition-[max-height] duration-300 lg:hidden ${
           open ? "max-h-112" : "max-h-0"
         }`}
       >
@@ -83,7 +95,12 @@ export default function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-brand-dark"
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`block rounded-lg px-4 py-2.5 text-sm font-medium ${
+                  isActive(link.href)
+                    ? "bg-brand/10 text-brand-dark"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-brand-dark"
+                }`}
               >
                 {link.label}
               </a>

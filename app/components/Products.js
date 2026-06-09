@@ -17,7 +17,7 @@ export default function Products() {
   const tone = TONE[product.statusTone];
 
   return (
-    <section id="products" className="relative overflow-hidden bg-[#f3eefb] py-16 text-navy-800 sm:py-28">
+    <section id="products" className="relative overflow-hidden bg-[#eef4fb] py-16 text-navy-800 sm:py-28">
       <div className="absolute inset-0 grid-bg-light opacity-60" />
       <div className="absolute -right-20 top-40 h-80 w-80 rounded-full bg-brand/10 blur-[120px]" />
 

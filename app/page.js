@@ -1,13 +1,13 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Products from "./components/Products";
-import PlatformThesis from "./components/PlatformThesis";
-import PlatformOverview from "./components/PlatformOverview";
-import PlatformHardware from "./components/PlatformHardware";
+import RecognisedStrip from "./components/RecognisedStrip";
+import PlatformBigIdea from "./components/PlatformBigIdea";
+import InnovationEngine from "./components/InnovationEngine";
+import PlatformGlance from "./components/PlatformGlance";
+import EnergyPlatform from "./components/EnergyPlatform";
 import PatentBanner from "./components/PatentBanner";
-import Roadmap from "./components/Roadmap";
-import Gallery from "./components/Gallery";
 import Partners from "./components/Partners";
+import Collaborators from "./components/Collaborators";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -16,14 +16,16 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Products />
-        <PlatformThesis />
-        <PlatformOverview />
-        <PlatformHardware />
+        <RecognisedStrip />
+        {/* The platform is the story — not a single product. */}
+        <PlatformBigIdea />
+        {/* Innovation engine — built to create advanced solutions faster. */}
+        <InnovationEngine show={["accel", "future"]} className="bg-white py-16 sm:py-24" />
+        <PlatformGlance />
+        <EnergyPlatform />
         <PatentBanner />
-        <Roadmap />
-        <Gallery />
         <Partners />
+        <Collaborators />
       </main>
       <Footer />
     </>

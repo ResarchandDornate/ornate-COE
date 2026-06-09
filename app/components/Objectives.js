@@ -2,9 +2,19 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { OBJECTIVES } from "../data";
 
+// Rotating vibrant accent palette for the number badges.
+const BADGE_COLORS = [
+  "bg-violet-100 text-violet-700",
+  "bg-sky-100 text-sky-700",
+  "bg-fuchsia-100 text-fuchsia-700",
+  "bg-emerald-100 text-emerald-700",
+  "bg-amber-100 text-amber-700",
+  "bg-rose-100 text-rose-700",
+];
+
 export default function Objectives() {
   return (
-    <section id="objectives" className="bg-[#faf8fe] py-16 sm:py-28">
+    <section id="objectives" className="bg-[#f3f7fc] py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Core Objectives"
@@ -20,7 +30,7 @@ export default function Objectives() {
                   {o.no}
                 </span>
                 <div className="relative">
-                  <span className="inline-flex h-8 items-center rounded-lg bg-linear-to-r from-brand-dark to-accent px-2.5 font-display text-xs font-bold text-white shadow-md shadow-brand/30 sm:h-9 sm:px-3 sm:text-sm">
+                  <span className={`inline-flex h-8 items-center rounded-lg ${BADGE_COLORS[i % BADGE_COLORS.length]} px-2.5 font-display text-xs font-bold shadow-sm sm:h-9 sm:px-3 sm:text-sm`}>
                     {o.no}
                   </span>
                   <h3 className="mt-3 font-display text-base font-bold text-navy-800 sm:mt-4 sm:text-lg">

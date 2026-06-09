@@ -1,121 +1,132 @@
-"use client";
-
-import Image from "next/image";
-import Counter from "./Counter";
-import ParticleField from "./ParticleField";
-import { STATS } from "../data";
+// Application chips (left column) — short label + line icon.
+const APPS = [
+  { label: "Solar", d: "M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10ZM12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19" },
+  { label: "BESS", d: "M4 8h13a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1ZM20 11v2" },
+  { label: "EV charging", d: "M13 2 4 14h6l-1 8 9-12h-6l1-8Z" },
+  { label: "Microgrids", d: "M12 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM5 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM19 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM12 7v4M12 11l-5 4M12 11l5 4" },
+  { label: "Solid-state TF", d: "M12 3 3 8l9 5 9-5-9-5ZM3 13l9 5 9-5" },
+];
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-navy text-white"
+      className="relative flex min-h-screen items-center overflow-hidden bg-[#fbfaff] text-navy-800"
     >
-      {/* Deep purple gradient base */}
-      <div className="absolute inset-0 bg-linear-to-br from-[#0c0720] via-[#1a0f38] to-[#2c1860]" />
-      {/* Bright purple glow toward the right, echoing the network cluster */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_55%,rgba(168,85,247,0.38),transparent_55%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(124,58,237,0.22),transparent_50%)]" />
+      {/* Full-bleed vivid mesh-gradient backdrop — covers the whole hero
+          edge to edge like a background image (no floating blobs) */}
+      <div className="absolute inset-0 mesh-hero" />
 
-      {/* Animated constellation of dots + links */}
-      <ParticleField />
-
-      {/* Faint grid + soft floating glows */}
-      <div className="absolute inset-0 grid-bg animate-grid opacity-20" />
-      <div className="animate-pulse-glow absolute -left-32 top-24 h-96 w-96 rounded-full bg-brand/25 blur-[130px]" />
-      <div className="animate-pulse-glow absolute -right-24 bottom-10 h-112 w-md rounded-full bg-accent/20 blur-[130px]" />
-      <div className="animate-float absolute right-[12%] top-[22%] h-24 w-24 rounded-2xl border border-white/15 bg-white/5 backdrop-blur-sm" />
-
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 py-24 sm:py-32 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
-        <div className="max-w-3xl">
-          <h1 className="font-display tracking-tight text-white">
-            <span className="text-gradient block whitespace-nowrap text-base font-semibold uppercase tracking-[0.18em] sm:text-2xl lg:text-3xl">
-              Centre of Excellence
-            </span>
-            <span className="mt-2 block text-2xl font-bold leading-[1.08] sm:text-5xl sm:leading-[1.05] lg:text-6xl">
-              Professor B.K. Bhattacharyya
-            </span>
-          </h1>
-
-          <p className="mt-3 font-display text-base font-medium text-purple-200 sm:mt-4 sm:text-xl">
-            Power Electronics &amp; Clean Energy Systems · at Ornate Solar
-          </p>
-
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:mt-6 sm:text-lg">
-            Researching, designing and commercializing advanced power
-            electronics — inverters, solar pump controllers and clean energy
-            systems — entirely through indigenous design, bridging academia and
-            industry to power India&apos;s clean energy transformation.
-          </p>
-
-          <div className="mt-9 flex flex-wrap gap-4">
-            <a
-              href="#products"
-              className="btn-gradient rounded-full px-7 py-3.5 text-sm font-semibold shadow-xl shadow-brand/40 hover:scale-105"
-            >
-              Explore our products
-            </a>
-            <a
-              href="/about"
-              className="rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
-            >
-              Vision &amp; Mission
-            </a>
-          </div>
-        </div>
-
-          {/* Founder portrait card */}
-          <div className="group relative mx-auto w-full max-w-sm lg:mx-0">
-            {/* Soft gradient glow behind the card */}
-            <div className="absolute -inset-3 rounded-4xl bg-linear-to-br from-brand/45 via-accent/25 to-transparent opacity-80 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
-            <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-2 shadow-2xl shadow-black/40 backdrop-blur-md transition-transform duration-500 group-hover:-translate-y-1">
-              <div className="relative overflow-hidden rounded-2xl">
-                <Image
-                  src="/Gemini_Generated_Image_gnm295gnm295gnm2.png"
-                  alt="Bidyut Kumar Bhattacharyya"
-                  width={600}
-                  height={750}
-                  priority
-                  className="aspect-4/5 w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                />
-                {/* Fade into the dark base so the name button reads clearly */}
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-linear-to-t from-[#0c0720] via-[#0c0720]/70 to-transparent" />
-                {/* Name button */}
-                <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
-                  <div className="btn-gradient rounded-full px-4 py-3 text-center shadow-lg shadow-brand/40">
-                    <span className="font-display text-sm font-bold tracking-wide text-white sm:text-base">
-                      Professor Bidyut Kumar Bhattacharyya
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Stat counters — glassy on the dark backdrop */}
-        <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 shadow-xl shadow-black/20 backdrop-blur-md sm:mt-20 md:grid-cols-4">
-          {STATS.map((s) => (
-            <div
-              key={s.label}
-              className="group bg-white/5 p-4 transition-colors hover:bg-white/10 sm:p-6"
-            >
-              <div className="text-gradient-light font-display text-2xl font-bold sm:text-4xl">
-                <Counter value={s.value} suffix={s.suffix} />
-              </div>
-              <div className="mt-1 text-xs font-semibold text-white sm:text-sm">
-                {s.label}
-              </div>
-              <div className="text-[11px] text-purple-200/70 sm:text-xs">{s.note}</div>
-            </div>
+      {/* Concept background — faint power-electronics circuit motif */}
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.45]"
+        preserveAspectRatio="xMidYMid slice"
+        viewBox="0 0 1440 800"
+        fill="none"
+      >
+        <g stroke="#9333ea" strokeWidth="1.5" opacity="0.22">
+          <path d="M0 180 H320 L360 220 H560" />
+          <path d="M560 220 V120 H760" />
+          <path d="M1440 300 H1120 L1080 260 H880" />
+          <path d="M0 620 H260 L300 580 H520" />
+          <path d="M1440 660 H1180 L1140 700 H940" />
+          <path d="M720 800 V640 H900" />
+        </g>
+        <g fill="#db2777" opacity="0.3">
+          {[
+            [560, 220], [760, 120], [880, 260], [520, 580], [940, 700], [900, 640], [320, 180], [1120, 300],
+          ].map(([x, y]) => (
+            <circle key={`${x}-${y}`} cx={x} cy={y} r="4" />
           ))}
+        </g>
+      </svg>
+
+      {/* Drifting grid */}
+      <div className="absolute inset-0 grid-bg-light animate-grid opacity-50" />
+
+      {/* Bottom fade so the section melts into the page below */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-b from-transparent to-[#f7f5fc]" />
+
+      <div className="relative z-10 mx-auto w-full max-w-4xl px-5 py-28 text-center sm:py-32 lg:px-8">
+        {/* Live status badge */}
+        <div
+          className="animate-rise mb-7 inline-flex items-center gap-2 rounded-full border border-brand/20 glass px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-dark shadow-sm shadow-brand/5"
+          style={{ animationDelay: "0ms" }}
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping-soft absolute inline-flex h-full w-full rounded-full bg-accent" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+          </span>
+          DSIR-Recognised In-House R&amp;D · Made in India
+        </div>
+
+        <h1
+          className="animate-rise mx-auto font-display text-4xl font-bold leading-[1.08] tracking-tight text-navy-800 sm:text-6xl sm:leading-[1.04] lg:text-7xl"
+          style={{ animationDelay: "80ms" }}
+        >
+          An indigenous power-conversion{" "}
+          <span className="text-gradient">technology platform</span>
+        </h1>
+
+        <p
+          className="animate-rise mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-700 sm:text-lg"
+          style={{ animationDelay: "180ms" }}
+        >
+          A hardware and firmware-defined power conversion platform developed and validated in India,
+          enabling rapid deployment across solar inverters, battery energy storage systems (BESS), EV
+          charging infrastructure, microgrids, and next-generation grid technologies.
+        </p>
+
+        <p
+          className="animate-rise mx-auto mt-5 font-display text-lg font-bold text-navy-800 sm:text-xl"
+          style={{ animationDelay: "260ms" }}
+        >
+          Built for Indian grids. <span className="text-gradient">Designed for global scale.</span>
+        </p>
+
+        {/* Application chips with icons */}
+        <div
+          className="animate-rise mt-8 flex flex-wrap justify-center gap-2.5"
+          style={{ animationDelay: "340ms" }}
+        >
+          {APPS.map((a) => (
+            <span
+              key={a.label}
+              className="group inline-flex items-center gap-2 rounded-full border border-white/70 glass px-3.5 py-2 text-xs font-semibold text-navy-800 shadow-sm shadow-brand/5 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md hover:shadow-brand/10"
+            >
+              <span className="text-brand transition-colors group-hover:text-accent">
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                  <path d={a.d} />
+                </svg>
+              </span>
+              {a.label}
+            </span>
+          ))}
+        </div>
+
+        <div
+          className="animate-rise mt-9 flex flex-wrap justify-center gap-4"
+          style={{ animationDelay: "420ms" }}
+        >
+          <a
+            href="/platform"
+            className="btn-gradient rounded-full px-7 py-3.5 text-sm font-semibold shadow-xl shadow-brand/30 transition-transform hover:scale-105"
+          >
+            Explore the platform
+          </a>
+          <a
+            href="/capability"
+            className="rounded-full border border-slate-300/80 glass px-7 py-3.5 text-sm font-semibold text-navy-800 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md hover:shadow-brand/10"
+          >
+            What we can build
+          </a>
         </div>
       </div>
 
       {/* Scroll cue */}
       <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2">
-        <div className="flex h-9 w-5 items-start justify-center rounded-full border border-white/30 p-1">
+        <div className="flex h-9 w-5 items-start justify-center rounded-full border border-slate-300 p-1">
           <span className="h-2 w-1 animate-bounce rounded-full bg-accent" />
         </div>
       </div>

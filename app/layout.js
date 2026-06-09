@@ -1,5 +1,6 @@
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import ScrollProgress from "./components/ScrollProgress";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -9,6 +10,12 @@ const inter = Inter({
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jet",
   subsets: ["latin"],
   display: "swap",
 });
@@ -32,9 +39,10 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable} antialiased`}
     >
-      <body className="min-h-screen bg-[#faf8fe] font-sans text-navy-800">
+      <body className="min-h-screen bg-white font-sans text-navy-800">
+        <ScrollProgress />
         {children}
       </body>
     </html>
