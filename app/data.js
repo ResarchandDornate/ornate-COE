@@ -214,10 +214,10 @@ export const TEAM = [
     bio: "Senior hardware testing engineer with extensive experience in the assembly, testing and validation of power electronic systems. He specializes in PCB soldering, circuit assembly, sensor-circuit testing and calibration, and comprehensive performance evaluation of solar and hybrid inverter platforms. His work spans hardware troubleshooting, functional and reliability testing, system validation and performance optimization — alongside R&D support through BOM management, component verification and prototype evaluation.",
   },
   {
-    name: "Gaurav Kumar",
-    role: "Embedded Developer",
-    img: "/gourav.png",
-    bio: "Builds DQ control-based grid-tied inverter firmware on STM32, with experience across IoT and BLE products using Zephyr RTOS.",
+    name: "Ankit Kumar",
+    role: "Hardware Testing Engineer",
+    img: "/ankit.jpeg",
+    bio: "Hardware testing engineer specializing in the validation, testing and troubleshooting of power electronic systems and embedded hardware — functional testing, fault diagnosis, performance evaluation and reliability verification of circuit boards for grid-tied solar inverters. His expertise spans test planning and execution, PCB and schematic review, BOM management, component verification and coordination with vendors and manufacturing teams.",
   },
   {
     name: "Krishna Gullapalli",
@@ -232,18 +232,6 @@ export const TEAM = [
     bio: "Electrical hardware engineer with expertise in power-converter development, inverter testing and debugging, and hardware design. Experienced with MATLAB, LTspice and Altium, and in electronic component selection for efficient system performance.",
   },
   {
-    name: "Kashyap Masiwal",
-    role: "Industrial Designer & Project Lead",
-    img: "/Kashyap_pic.jpeg",
-    bio: "Industrial designer shaping IP-rated enclosures and CMF for inverter systems; led the design of a solar panel cleaning robot and residential solar carports.",
-  },
-  {
-    name: "Ankit Kumar",
-    role: "Hardware Testing Engineer",
-    img: "/ankit.jpeg",
-    bio: "Hardware testing engineer specializing in the validation, testing and troubleshooting of power electronic systems and embedded hardware — functional testing, fault diagnosis, performance evaluation and reliability verification of circuit boards for grid-tied solar inverters. His expertise spans test planning and execution, PCB and schematic review, BOM management, component verification and coordination with vendors and manufacturing teams.",
-  },
-  {
     name: "Aditya Kumar Agarhari",
     role: "R&D Electrical Engineer",
     img: "/Aditya_pic.jpeg",
@@ -254,6 +242,18 @@ export const TEAM = [
     role: "Firmware Developer",
     img: "/Tamanna_pic.jpeg",
     bio: "Firmware developer writing and debugging Embedded C/C++ for microcontroller-based systems, interfacing peripherals such as GPIO, ADC, UART and I2C and validating firmware on hardware.",
+  },
+  {
+    name: "Kashyap Masiwal",
+    role: "Industrial Designer & Project Lead",
+    img: "/Kashyap_pic.jpeg",
+    bio: "Industrial designer shaping IP-rated enclosures and CMF for inverter systems; led the design of a solar panel cleaning robot and residential solar carports.",
+  },
+  {
+    name: "Gaurav Kumar",
+    role: "Embedded Developer",
+    img: "/gourav.png",
+    bio: "Builds DQ control-based grid-tied inverter firmware on STM32, with experience across IoT and BLE products using Zephyr RTOS.",
   },
 ];
 
