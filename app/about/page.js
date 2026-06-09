@@ -72,9 +72,9 @@ export default function AboutPage() {
                       className="aspect-4/5 w-full object-cover object-top"
                     />
                   </div>
-                  <span className="btn-gradient absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-5 py-2 text-xs font-semibold text-white shadow-lg shadow-brand/30">
+                  <p className="text-gradient mt-5 text-center font-display text-lg font-bold tracking-wide">
                     Professor Bidyut Kumar
-                  </span>
+                  </p>
                 </div>
               </Reveal>
             </div>
