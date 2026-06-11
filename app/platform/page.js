@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import RecognisedStrip from "../components/RecognisedStrip";
 import PlatformBigIdea from "../components/PlatformBigIdea";
 import PlatformGlance from "../components/PlatformGlance";
 import EnergyPlatform from "../components/EnergyPlatform";
@@ -27,7 +26,6 @@ export default function PlatformPage() {
       <main>
         {/* Merged from the former home page — the platform overview up top. */}
         <Hero />
-        <RecognisedStrip />
         {/* The platform is the story — not a single product. */}
         <PlatformBigIdea />
         <PlatformGlance />
