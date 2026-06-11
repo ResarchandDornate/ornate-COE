@@ -33,11 +33,11 @@ export const MISSION =
 
 // The application areas the platform powers — shown in the Vision/Mission section.
 export const VM_APPLICATIONS = [
-  { name: "Solar inverters", desc: "ResidentiGrid-Tied Inverters Residential to Utility Scale High Efficiency Scalable Architectureal to utility scale" },
-  { name: "Battery energy storage systems (BESS)", desc: "Bi-Directional Power Flow Backup Power Grid Support Smart Energy Control" },
-  { name: "EV DC fast charging", desc: "Fast EV Charging Electric Mobility Energy-Efficient Charging Rapid Charging Solutions" },
-  { name: "Microgrids & Hybrid Energy Systems", desc: "Reliable Power Supply Sustainable Infrastructure Energy Resilience Renewable Energy Optimization" },
-  { name: "Solid-state transformers", desc: "Next-Generation Energy Infrastructure Grid Flexibility Intelligent Power Conversion Smart Grid Infrastructure" },
+  { name: "Solar inverters", desc: "ResidentiGrid-Tied, Inverters Residential to Utility Scale, High Efficiency,Scalable Architectureal to utility scale" },
+  { name: "Battery energy storage systems (BESS)", desc: "Bi-Directional Power Flow, Backup Power, Grid Support, Smart Energy Control" },
+  { name: "EV DC fast charging", desc: "Fast EV Charging, Electric Mobility, Energy-Efficient Charging, Rapid Charging Solutions" },
+  { name: "Microgrids & Hybrid Energy Systems", desc: "Reliable Power Supply, Sustainable Infrastructure, Energy Resilience, Renewable Energy Optimization" },
+  { name: "Solid-state transformers", desc: "Next-Generation Energy Infrastructure, Grid Flexibility, Intelligent Power Conversion, Smart Grid Infrastructure" },
 ];
 
 export const OBJECTIVES = [
