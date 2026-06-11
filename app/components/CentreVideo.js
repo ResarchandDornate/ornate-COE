@@ -23,8 +23,8 @@ export default function CentreVideo() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Inside the Centre"
-          title="See our work in motion"
-          subtitle="A look inside the B.K. Bhattacharyya Centre of Excellence — the people, the bench and the indigenous power-electronics engineering behind every prototype."
+          title="See Our Work in Action"
+          subtitle="A glimpse into the B.K. Bhattacharyya Centre of Excellence — its people, laboratories, and the engineering behind every prototype in power electronics."
         />
 
         <Reveal className="mt-10 sm:mt-14">

@@ -16,8 +16,8 @@ export default function Collaborators() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Academic & Institutional Collaborators"
-          title="Working with India's leading institutions"
-          subtitle="Our in-house R&D — recognised by the DSIR — collaborates with premier institutes to co-develop standards, file patents, mentor talent, and bring research to the field."
+          title={"Working with India’s Leading Institutions"}
+          subtitle="Our in-house R&D, recognized by DSIR, partners with premier institutes to co-develop standards, file patents, mentor talent, and translate research into real-world applications."
         />
 
         <div className="mt-10 grid grid-cols-2 gap-4 sm:mt-14 sm:grid-cols-3 sm:gap-6 lg:grid-cols-5">

@@ -43,7 +43,7 @@ export default function AboutPage() {
               <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.85)] sm:text-base">
                 The Centre of Excellence at Ornate Agencies Pvt. Ltd. is dedicated to researching and
                 developing technologies in Power Electronics — both hardware and software — which will
-                eventually be utilised as cutting-edge, digitally controlled High-Power products for
+                eventually be utilised as cutting-edge, digitally controlled high-power products for
                 residential, industrial and military applications.
               </p>
             </Reveal>
