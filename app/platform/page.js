@@ -13,7 +13,6 @@ import PlatformConditions from "../components/PlatformConditions";
 import InnovationEngine from "../components/InnovationEngine";
 import PatentBanner from "../components/PatentBanner";
 import Partners from "../components/Partners";
-import Collaborators from "../components/Collaborators";
 
 export const metadata = {
   title: "Platform — B.K. Bhattacharyya Centre of Excellence",
@@ -51,7 +50,6 @@ export default function PlatformPage() {
         {/* Recognition & partners — carried over from the home page. */}
         <PatentBanner />
         <Partners />
-        <Collaborators />
       </main>
       <Footer />
     </>
