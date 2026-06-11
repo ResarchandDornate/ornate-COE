@@ -53,13 +53,13 @@ export default function CapabilityPage() {
             <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 lg:grid-cols-2">
               <Reveal className="h-full">
                 <div className="h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:rounded-3xl sm:p-8">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-600">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-600">
                     Reused from the platform
                   </span>
                   <ul className="mt-5 space-y-3">
                     {EV_REUSED.map((t) => (
                       <li key={t} className="flex items-start gap-3 text-sm leading-relaxed text-slate-700">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-500" />
                         {t}
                       </li>
                     ))}

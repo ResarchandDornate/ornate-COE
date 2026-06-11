@@ -23,7 +23,7 @@ export default function Collaborators() {
         <div className="mt-10 grid grid-cols-2 gap-4 sm:mt-14 sm:grid-cols-3 sm:gap-6 lg:grid-cols-5">
           {COLLABORATORS.map((c, i) => (
             <Reveal key={c.name} delay={(i % 5) * 80} className="h-full">
-              <div className="group flex h-full flex-col items-center justify-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-fuchsia-300 hover:bg-fuchsia-50 hover:shadow-xl hover:shadow-fuchsia-500/10 sm:rounded-3xl">
+              <div className="group flex h-full flex-col items-center justify-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-300 hover:bg-blue-50 hover:shadow-xl hover:shadow-blue-500/10 sm:rounded-3xl">
                 <div className="relative h-16 w-16 sm:h-20 sm:w-20">
                   <Image
                     src={c.img}

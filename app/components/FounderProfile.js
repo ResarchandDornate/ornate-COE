@@ -90,7 +90,7 @@ export default function FounderProfile() {
             {CREDENTIALS.map((c) => (
               <div
                 key={c.label}
-                className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-linear-to-br from-white to-slate-50 p-5 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-fuchsia-300 hover:shadow-lg hover:shadow-fuchsia-500/10 sm:p-6"
+                className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-linear-to-br from-white to-slate-50 p-5 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 sm:p-6"
               >
                 <span className="text-gradient font-display text-2xl font-bold sm:text-3xl">
                   {c.stat}

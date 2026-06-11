@@ -21,7 +21,7 @@ export default function PlatformNational() {
         <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 sm:gap-6">
           {n.shifts.map((s, i) => (
             <Reveal key={s.title} delay={(i % 2) * 120} className="h-full">
-              <div className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-fuchsia-300 hover:bg-fuchsia-50 hover:shadow-xl hover:shadow-fuchsia-500/10 sm:rounded-3xl sm:p-7">
+              <div className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-300 hover:bg-blue-50 hover:shadow-xl hover:shadow-blue-500/10 sm:rounded-3xl sm:p-7">
                 <h3 className="font-display text-base font-bold text-navy-800 sm:text-lg">{s.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-slate-600 sm:text-sm">{s.body}</p>
               </div>
@@ -39,14 +39,14 @@ export default function PlatformNational() {
         <div className="mt-8 grid gap-5 sm:gap-6 lg:grid-cols-2">
           {/* What India does today */}
           <Reveal className="h-full">
-            <div className="h-full rounded-2xl border border-emerald-200/70 bg-emerald-50/60 p-6 shadow-sm sm:rounded-3xl sm:p-8">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-600">
+            <div className="h-full rounded-2xl border border-blue-200/70 bg-blue-50/60 p-6 shadow-sm sm:rounded-3xl sm:p-8">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-600">
                 {n.doesNow.title}
               </span>
               <ul className="mt-5 space-y-3">
                 {n.doesNow.items.map((it) => (
                   <li key={it} className="flex items-start gap-3 text-sm leading-relaxed text-slate-700">
-                    <Dot tone="bg-emerald-500" />
+                    <Dot tone="bg-blue-500" />
                     {it}
                   </li>
                 ))}
@@ -56,14 +56,14 @@ export default function PlatformNational() {
 
           {/* What is still imported */}
           <Reveal delay={120} className="h-full">
-            <div className="h-full rounded-2xl border border-amber-300/60 bg-amber-50 p-6 shadow-sm sm:rounded-3xl sm:p-8">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-600">
+            <div className="h-full rounded-2xl border border-slate-300/60 bg-slate-50 p-6 shadow-sm sm:rounded-3xl sm:p-8">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-600">
                 {n.imported.title}
               </span>
               <ul className="mt-5 space-y-3">
                 {n.imported.items.map((it) => (
                   <li key={it} className="flex items-start gap-3 text-sm leading-relaxed text-slate-700">
-                    <Dot tone="bg-amber-500" />
+                    <Dot tone="bg-slate-500" />
                     {it}
                   </li>
                 ))}

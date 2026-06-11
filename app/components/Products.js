@@ -8,7 +8,7 @@ import { PRODUCTS } from "../data";
 const TONE = {
   done: { dot: "bg-accent", text: "text-accent-dark", chip: "bg-accent/10 text-accent-dark", ring: "ring-accent/40" },
   progress: { dot: "bg-brand", text: "text-brand-dark", chip: "bg-brand/10 text-brand-dark", ring: "ring-brand/40" },
-  planned: { dot: "bg-electric", text: "text-sky-600", chip: "bg-sky-100 text-sky-700", ring: "ring-sky-400/40" },
+  planned: { dot: "bg-electric", text: "text-blue-600", chip: "bg-blue-100 text-blue-700", ring: "ring-blue-400/40" },
 };
 
 export default function Products() {

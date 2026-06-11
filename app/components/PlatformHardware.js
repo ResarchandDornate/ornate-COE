@@ -20,7 +20,7 @@ function HardwareCard({ item, feature }) {
           <h3 className={`font-display font-bold drop-shadow ${feature ? "text-xl sm:text-3xl" : "text-lg sm:text-xl"}`}>
             {item.title}
           </h3>
-          <p className={`mt-2 max-w-2xl leading-relaxed text-sky-100/90 ${feature ? "text-sm sm:text-base" : "text-[13px] sm:text-sm"}`}>
+          <p className={`mt-2 max-w-2xl leading-relaxed text-blue-100/90 ${feature ? "text-sm sm:text-base" : "text-[13px] sm:text-sm"}`}>
             {item.desc}
           </p>
         </div>

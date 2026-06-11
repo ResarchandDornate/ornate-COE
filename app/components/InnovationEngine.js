@@ -2,13 +2,14 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { INNOVATION_ENGINE } from "../data";
 
+// Vivid "4D" gradient tiles — bright fill + colour-matched glow.
 const TILE_COLORS = [
-  "bg-violet-100 text-violet-600",
-  "bg-sky-100 text-sky-600",
-  "bg-fuchsia-100 text-fuchsia-600",
-  "bg-emerald-100 text-emerald-600",
-  "bg-amber-100 text-amber-600",
-  "bg-rose-100 text-rose-600",
+  "from-amber-400 to-orange-500 shadow-orange-500/40",
+  "from-emerald-400 to-teal-500 shadow-emerald-500/40",
+  "from-blue-500 to-indigo-600 shadow-blue-500/40",
+  "from-violet-500 to-fuchsia-500 shadow-violet-500/40",
+  "from-sky-400 to-cyan-500 shadow-cyan-500/40",
+  "from-rose-400 to-pink-500 shadow-rose-500/40",
 ];
 
 // The research-driven "innovation engine" narrative — a platform built to create
@@ -39,7 +40,7 @@ export default function InnovationEngine({
           <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-3 sm:gap-5">
             {accelerators.map((a, i) => (
               <Reveal key={a.label} delay={(i % 3) * 90} className="h-full">
-                <div className="h-full rounded-2xl border border-slate-200 bg-[#f3f7fc] p-6 shadow-sm transition-colors hover:border-fuchsia-300 hover:bg-fuchsia-50 sm:rounded-3xl sm:p-7">
+                <div className="h-full rounded-2xl border border-slate-200 bg-[#f3f7fc] p-6 shadow-sm transition-colors hover:border-blue-300 hover:bg-blue-50 sm:rounded-3xl sm:p-7">
                   <div className="text-gradient font-display text-2xl font-bold sm:text-3xl">
                     {a.value}
                   </div>
@@ -70,7 +71,7 @@ export default function InnovationEngine({
             <div className="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-5">
               {challenges.map((c, i) => (
                 <Reveal key={c.title} delay={(i % 2) * 90} className="h-full">
-                  <div className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-fuchsia-300 hover:bg-fuchsia-50 hover:shadow-lg hover:shadow-fuchsia-500/10 sm:rounded-3xl">
+                  <div className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-300 hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-500/10 sm:rounded-3xl">
                     <h4 className="font-display text-base font-bold text-navy-800">
                       {c.title}
                     </h4>
@@ -104,9 +105,13 @@ export default function InnovationEngine({
             <div className="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
               {frameworks.map((f, i) => (
                 <Reveal key={f.name} delay={(i % 3) * 80} className="h-full">
-                  <div className="group flex h-full items-start gap-3 rounded-2xl border border-slate-200 bg-[#f3f7fc] p-5 shadow-sm transition-all hover:border-fuchsia-300 hover:bg-fuchsia-50 hover:shadow-lg hover:shadow-fuchsia-500/10">
-                    <span className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${TILE_COLORS[i % TILE_COLORS.length]} shadow-sm transition-transform group-hover:scale-110`}>
-                      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <div className="group flex h-full items-start gap-3 rounded-2xl border border-slate-200 bg-[#f3f7fc] p-5 shadow-sm transition-all hover:border-blue-300 hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-500/10">
+                    <span className={`relative mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-linear-to-br text-white shadow-lg ring-1 ring-white/40 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 ${TILE_COLORS[i % TILE_COLORS.length]}`}>
+                      {/* glossy top highlight for the 4D look */}
+                      <span className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-linear-to-b from-white/45 to-transparent" />
+                      {/* soft corner sheen */}
+                      <span className="pointer-events-none absolute -right-2 -top-2 h-6 w-6 rounded-full bg-white/30 blur-md" />
+                      <svg viewBox="0 0 24 24" className="relative h-4 w-4 drop-shadow-sm" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M4 7h16M4 12h16M4 17h10" />
                       </svg>
                     </span>

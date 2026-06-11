@@ -13,7 +13,7 @@ function CertCard({ item, onOpen }) {
       className="group relative block w-full text-left"
       title={`${item.number} — ${item.title}`}
     >
-      <div className="relative aspect-1000/1414 overflow-hidden rounded-xl border border-amber-200/60 bg-amber-50 shadow-md ring-1 ring-slate-900/5 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-xl group-hover:shadow-amber-500/20 group-hover:ring-amber-400/50">
+      <div className="relative aspect-1000/1414 overflow-hidden rounded-xl border border-blue-200/60 bg-blue-50 shadow-md ring-1 ring-slate-900/5 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-xl group-hover:shadow-blue-500/20 group-hover:ring-blue-400/50">
         <Image
           src={item.src}
           alt={`${item.number} — ${item.title}`}
@@ -114,9 +114,9 @@ function Modal({ items, index, onClose, onNav }) {
           />
         </div>
         <div className="mt-4 max-w-xl text-center">
-          <p className="font-mono text-sm font-semibold text-amber-200">{item.number}</p>
+          <p className="font-mono text-sm font-semibold text-blue-200">{item.number}</p>
           <p className="mt-1 font-display text-base font-bold text-white sm:text-lg">{item.title}</p>
-          <p className="mt-1 text-xs text-sky-200">Date of Patent: {item.date}</p>
+          <p className="mt-1 text-xs text-blue-200">Date of Patent: {item.date}</p>
           <a
             href={item.url}
             target="_blank"

@@ -10,6 +10,15 @@ const APP_ICONS = [
   "M12 3 3 8l9 5 9-5-9-5ZM3 13l9 5 9-5M3 17l9 5 9-5", // SST (layers)
 ];
 
+// Vivid "4D" gradient tile per application — bright fill + colour-matched glow.
+const APP_TILES = [
+  "from-amber-400 to-orange-500 shadow-orange-500/40",   // Solar
+  "from-emerald-400 to-teal-500 shadow-emerald-500/40",  // BESS
+  "from-blue-500 to-indigo-600 shadow-blue-500/40",      // EV DC
+  "from-violet-500 to-fuchsia-500 shadow-violet-500/40", // Microgrids
+  "from-sky-400 to-cyan-500 shadow-cyan-500/40",         // SST
+];
+
 function AppIcon({ d }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
@@ -62,8 +71,18 @@ export default function About() {
                   key={a.name}
                   className="group flex flex-col items-center rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"
                 >
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand shadow-md shadow-brand/30 transition-transform duration-300 group-hover:scale-110">
-                    <AppIcon d={APP_ICONS[i] ?? APP_ICONS[0]} />
+                  <span
+                    className={`relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-linear-to-br text-white shadow-lg ring-1 ring-white/40 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 ${
+                      APP_TILES[i] ?? APP_TILES[0]
+                    }`}
+                  >
+                    {/* glossy top highlight for the 4D look */}
+                    <span className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-linear-to-b from-white/45 to-transparent" />
+                    {/* soft corner sheen */}
+                    <span className="pointer-events-none absolute -right-2 -top-2 h-6 w-6 rounded-full bg-white/30 blur-md" />
+                    <span className="relative drop-shadow-sm">
+                      <AppIcon d={APP_ICONS[i] ?? APP_ICONS[0]} />
+                    </span>
                   </span>
                   <span className="mt-3 font-display text-[13px] font-bold leading-snug text-navy-800 sm:text-sm">
                     {a.name}
@@ -75,28 +94,62 @@ export default function About() {
           </div>
         </Reveal>
 
+        {/* Vision & Mission */}
+        <Reveal className="mb-7 text-center sm:mb-9">
+          <span className="inline-block rounded-full bg-navy-800/5 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-navy-700 ring-1 ring-navy-800/10">
+            Our Purpose
+          </span>
+          <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-navy-800 sm:text-3xl">
+            Vision &amp; Mission
+          </h2>
+        </Reveal>
+
         <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
+          {/* Vision */}
           <Reveal delay={0}>
-            <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-brand/20 sm:rounded-3xl sm:p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand shadow-lg shadow-brand/30 transition-all duration-300 group-hover:scale-110 group-hover:from-brand-dark group-hover:to-brand sm:h-14 sm:w-14 sm:rounded-2xl">
-                <VisionIcon />
+            <div className="group relative h-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-navy-600/40 hover:shadow-2xl hover:shadow-navy-800/10 sm:p-9">
+              <span className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-navy-700 to-navy-600" />
+              <span className="pointer-events-none absolute -right-3 -top-5 select-none font-display text-8xl font-bold text-slate-100">
+                01
+              </span>
+              <div className="relative">
+                <div className="flex items-center gap-4">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-navy-700 to-navy-800 text-white shadow-lg shadow-navy-800/25 transition-transform duration-300 group-hover:scale-110">
+                    <VisionIcon />
+                  </span>
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy-600">
+                    Vision
+                  </span>
+                </div>
+                <h3 className="mt-5 font-display text-2xl font-bold leading-tight tracking-tight text-navy-800 sm:text-3xl">
+                  Where we are headed
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-[15px]">{VISION}</p>
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold text-navy-800 transition-colors group-hover:text-brand-dark sm:mt-6 sm:text-2xl">
-                Vision
-              </h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-slate-600 sm:mt-3 sm:text-base">{VISION}</p>
             </div>
           </Reveal>
 
+          {/* Mission */}
           <Reveal delay={120}>
-            <div className="card-gradient group h-full rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/20 sm:rounded-3xl sm:p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent-dark shadow-lg shadow-accent/30 transition-all duration-300 group-hover:scale-110 group-hover:from-brand-dark group-hover:to-accent sm:h-14 sm:w-14 sm:rounded-2xl">
-                <MissionIcon />
+            <div className="group relative h-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-navy-600/40 hover:shadow-2xl hover:shadow-navy-800/10 sm:p-9">
+              <span className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-navy-600 to-navy-700" />
+              <span className="pointer-events-none absolute -right-3 -top-5 select-none font-display text-8xl font-bold text-slate-100">
+                02
+              </span>
+              <div className="relative">
+                <div className="flex items-center gap-4">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-navy-600 to-navy-800 text-white shadow-lg shadow-navy-800/25 transition-transform duration-300 group-hover:scale-110">
+                    <MissionIcon />
+                  </span>
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy-600">
+                    Mission
+                  </span>
+                </div>
+                <h3 className="mt-5 font-display text-2xl font-bold leading-tight tracking-tight text-navy-800 sm:text-3xl">
+                  How we get there
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-[15px]">{MISSION}</p>
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold text-navy-800 transition-colors group-hover:text-accent-dark sm:mt-6 sm:text-2xl">
-                Mission
-              </h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-slate-600 sm:mt-3 sm:text-base">{MISSION}</p>
             </div>
           </Reveal>
         </div>

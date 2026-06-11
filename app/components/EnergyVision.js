@@ -12,7 +12,7 @@ const BUILD_FOR = [
 export default function EnergyVision() {
   return (
     <section className="relative overflow-hidden bg-navy py-16 text-white sm:py-28">
-      <div className="absolute inset-0 bg-linear-to-br from-[#0d1a2e] via-[#102a45] to-[#c2410c]" />
+      <div className="absolute inset-0 bg-linear-to-br from-navy via-navy-700 to-brand-dark" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(234,88,12,0.30),transparent_55%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_80%,rgba(244,63,94,0.22),transparent_55%)]" />
       <div className="absolute inset-0 grid-bg opacity-15" />

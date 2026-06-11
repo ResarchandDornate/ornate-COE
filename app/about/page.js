@@ -19,10 +19,39 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
+      <Navbar overDark />
       <main>
-        {/* Hero — text + professor image, clean background */}
-        <section className="bg-white pt-28 pb-14 sm:pt-36 sm:pb-20">
+        {/* Hero — full-bleed semiconductor / power-electronics background */}
+        <section className="relative isolate overflow-hidden">
+          <Image
+            src="/Gemini_Generated_Image_vsnfdyvsnfdyvsnf.png"
+            alt="Semiconductor chip on a circuit board — indigenous power-electronics research"
+            fill
+            priority
+            sizes="100vw"
+            className="-z-10 object-cover object-center"
+          />
+          <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/70 via-black/55 to-black/70" />
+          <div className="mx-auto max-w-7xl px-5 pb-16 pt-36 sm:pb-24 sm:pt-44 lg:px-8">
+            <Reveal className="text-center">
+              <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white ring-1 ring-white/20 backdrop-blur-sm">
+                Research &amp; Development · Ornate
+              </span>
+              <h1 className="mt-6 font-display text-5xl font-bold uppercase leading-[1.02] tracking-tight text-white sm:text-7xl lg:text-8xl">
+                Centre of <span className="text-gradient">Excellence</span>
+              </h1>
+              <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.85)] sm:text-base">
+                The Centre of Excellence at Ornate Agencies Pvt. Ltd. is dedicated to researching and
+                developing technologies in Power Electronics — both hardware and software — which will
+                eventually be utilised as cutting-edge, digitally controlled High-Power products for
+                residential, industrial and military applications.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Founder intro — text + professor image */}
+        <section className="bg-white pb-14 pt-4 sm:pb-20 sm:pt-6">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
               {/* Text */}
@@ -30,9 +59,9 @@ export default function AboutPage() {
                 <span className="inline-block rounded-full bg-brand/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-dark sm:text-xs">
                   Centre of Excellence
                 </span>
-                <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-navy-800 sm:text-5xl lg:text-6xl">
+                <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-navy-800 sm:text-5xl lg:text-6xl">
                   Professor B.K. <span className="text-gradient">Bhattacharyya</span>
-                </h1>
+                </h2>
                 <p className="mt-4 text-sm font-semibold uppercase tracking-widest text-slate-500 sm:text-base">
                   Power Electronics &amp; Clean Energy Systems · at Ornate Solar
                 </p>

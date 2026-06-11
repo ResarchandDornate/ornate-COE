@@ -4,9 +4,7 @@
 // ---------------------------------------------------------------------------
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/" },
   { label: "Platform", href: "/platform" },
-  { label: "Centre of Excellence", href: "/about" },
   { label: "Capability", href: "/capability" },
   { label: "Achievements", href: "/achievements" },
   { label: "Patents", href: "/patents" },
@@ -28,10 +26,10 @@ export const STATS = [
 ];
 
 export const VISION =
-  "To be a globally recognized center for indigenous power electronics innovation — leading India's clean energy transformation through world-class, self-reliant engineering.";
+  "A globally recognized centre of excellence for power electronics and control engineering — contributing towards developing a world-class technology stack for cutting-edge power electronic products.";
 
 export const MISSION =
-  "To research, design, prototype and commercialize an indigenous power-conversion platform — one reusable control core spanning solar inverters, battery energy storage (BESS), EV fast charging, microgrid converters and solid-state transformers — built entirely through indigenous design, bridging academia and industry.";
+  "To research, design, prototype and commercialize a power-conversion platform in one reconfigurable control core utilizable in solar inverters, battery energy storage systems (BESS), EV fast charging solutions, microgrid converters and solid-state transformers — built entirely through indigenous design, bridging academia and industry.";
 
 // The application areas the platform powers — shown in the Vision/Mission section.
 export const VM_APPLICATIONS = [

@@ -56,22 +56,29 @@ export default function PlatformConcept() {
           <svg viewBox="0 0 920 540" className="mx-auto w-full max-w-3xl" role="img" aria-label="One indigenous control core powering five product classes">
             <defs>
               <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#c2410c" />
-                <stop offset="100%" stopColor="#f59e0b" />
+                <stop offset="0%" stopColor="#1e3a8a" />
+                <stop offset="55%" stopColor="#2563eb" />
+                <stop offset="100%" stopColor="#3b82f6" />
               </linearGradient>
+              {/* Glossy top highlight — gives the core a curved, lit surface */}
+              <radialGradient id="coreSheen" cx="0.35" cy="0.22" r="0.75">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.5" />
+                <stop offset="45%" stopColor="#ffffff" stopOpacity="0.12" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+              </radialGradient>
             </defs>
 
             {/* Connecting lines */}
             {NODES.map((n) => (
-              <line key={`l-${n.label}`} x1={CX} y1={CY} x2={n.x} y2={n.y} stroke="#f59e0b" strokeWidth="2" strokeDasharray="5 6" opacity="0.6" />
+              <line key={`l-${n.label}`} x1={CX} y1={CY} x2={n.x} y2={n.y} stroke="#3b82f6" strokeWidth="2" strokeDasharray="5 6" opacity="0.6" />
             ))}
 
             {/* Outer application nodes */}
             {NODES.map((n) => (
               <g key={n.label}>
-                <circle cx={n.x} cy={n.y} r="54" fill="#ffffff" stroke="#ea580c" strokeWidth="2" />
-                <circle cx={n.x} cy={n.y} r="54" fill="#ea580c" opacity="0.06" />
-                <text x={n.x} y={n.y + 5} textAnchor="middle" className="font-display" fontSize="17" fontWeight="700" fill="#0f1d33">
+                <circle cx={n.x} cy={n.y} r="54" fill="#ffffff" stroke="#2563eb" strokeWidth="2" />
+                <circle cx={n.x} cy={n.y} r="54" fill="#2563eb" opacity="0.06" />
+                <text x={n.x} y={n.y + 5} textAnchor="middle" className="font-display" fontSize="17" fontWeight="700" fill="#0f172a">
                   {n.label}
                 </text>
               </g>
@@ -79,6 +86,7 @@ export default function PlatformConcept() {
 
             {/* Central core */}
             <circle cx={CX} cy={CY} r="86" fill="url(#coreGrad)" />
+            <circle cx={CX} cy={CY} r="86" fill="url(#coreSheen)" />
             <circle cx={CX} cy={CY} r="86" fill="none" stroke="#ffffff" strokeOpacity="0.4" strokeWidth="2" />
             <text x={CX} y={CY - 8} textAnchor="middle" className="font-display" fontSize="20" fontWeight="800" fill="#ffffff">
               CONTROL

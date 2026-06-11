@@ -1,11 +1,12 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
+// Vivid "4D" gradient tiles — bright fill + colour-matched glow.
 const PILLAR_COLORS = [
-  "bg-violet-100 text-violet-600",
-  "bg-sky-100 text-sky-600",
-  "bg-fuchsia-100 text-fuchsia-600",
-  "bg-emerald-100 text-emerald-600",
+  "from-amber-400 to-orange-500 shadow-orange-500/40",
+  "from-emerald-400 to-teal-500 shadow-emerald-500/40",
+  "from-blue-500 to-indigo-600 shadow-blue-500/40",
+  "from-violet-500 to-fuchsia-500 shadow-violet-500/40",
 ];
 
 const PILLARS = [
@@ -56,21 +57,21 @@ function CircuitBulb() {
     <svg viewBox="0 0 240 240" className="w-full max-w-xs" role="img" aria-label="Innovation — a lightbulb formed from circuit traces">
       <defs>
         <linearGradient id="bulbGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#ea580c" />
-          <stop offset="100%" stopColor="#f59e0b" />
+          <stop offset="0%" stopColor="#3b82f6" />
+          <stop offset="100%" stopColor="#3b82f6" />
         </linearGradient>
       </defs>
 
       {/* Soft glow */}
-      <circle cx="120" cy="100" r="74" fill="#ea580c" opacity="0.10" className="animate-pulse-glow" />
+      <circle cx="120" cy="100" r="74" fill="#3b82f6" opacity="0.10" className="animate-pulse-glow" />
 
       {/* Radiating circuit traces with end nodes */}
-      <g stroke="#ea580c" strokeWidth="2" opacity="0.5" fill="none">
+      <g stroke="#3b82f6" strokeWidth="2" opacity="0.5" fill="none">
         <path d="M120 26 V6" />
         <path d="M48 100 H18 M192 100 H222" />
         <path d="M64 48 L44 28 M176 48 L196 28" />
       </g>
-      <g fill="#f59e0b">
+      <g fill="#3b82f6">
         {[[120, 6], [18, 100], [222, 100], [44, 28], [196, 28]].map(([x, y]) => (
           <circle key={`${x}-${y}`} cx={x} cy={y} r="4" />
         ))}
@@ -89,7 +90,7 @@ function CircuitBulb() {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <circle cx="120" cy="92" r="4" fill="#f5a623" />
+      <circle cx="120" cy="92" r="4" fill="#3b82f6" />
 
       {/* Base */}
       <g stroke="#0f1d33" strokeWidth="3" strokeLinecap="round">
@@ -136,9 +137,13 @@ export default function CapabilityInnovation() {
         <div className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
           {PILLARS.map((p, i) => (
             <Reveal key={p.tag} delay={(i % 4) * 80} className="h-full">
-              <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-fuchsia-300 hover:bg-fuchsia-50 hover:shadow-xl hover:shadow-fuchsia-500/10 sm:rounded-3xl">
-                <span className={`flex h-12 w-12 items-center justify-center rounded-xl ${PILLAR_COLORS[i % PILLAR_COLORS.length]} shadow-sm transition-transform duration-300 group-hover:scale-110`}>
-                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-300 hover:bg-blue-50 hover:shadow-xl hover:shadow-blue-500/10 sm:rounded-3xl">
+                <span className={`relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-linear-to-br text-white shadow-lg ring-1 ring-white/40 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 ${PILLAR_COLORS[i % PILLAR_COLORS.length]}`}>
+                  {/* glossy top highlight for the 4D look */}
+                  <span className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-linear-to-b from-white/45 to-transparent" />
+                  {/* soft corner sheen */}
+                  <span className="pointer-events-none absolute -right-2 -top-2 h-6 w-6 rounded-full bg-white/30 blur-md" />
+                  <svg viewBox="0 0 24 24" className="relative h-6 w-6 drop-shadow-sm" fill="none" stroke="currentColor" strokeWidth="1.8">
                     {p.icon}
                   </svg>
                 </span>

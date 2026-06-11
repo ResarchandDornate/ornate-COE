@@ -32,7 +32,7 @@ const SUB_LEADS = [
     role: "Embedded Software Engineer",
     img: "/arindam.png",
     linkedin: "https://www.linkedin.com/in/arindamdebnath-ds",
-    bio: "Embedded software engineer specializing in grid-tied solar inverters, digital control systems and renewable energy. He develops grid-synchronization algorithms, MPPT control, harmonic compensation and real-time firmware for ARM Cortex-M platforms, and contributed to the integration and BIS certification submission of Ornate's 3.3 kW grid-tied inverter. He also brings expertise in AI, machine learning and computer vision.",
+    bio: "Embedded Software Engineer with over 4 years of industry experience specializing in Grid-Tied Solar Inverters, Digital Control Systems, and Renewable Energy Technologies. Experienced in developing synchronization algorithms, MPPT techniques, harmonic compensation methods, protection systems, and real-time firmware for ARM Cortex-M platforms. Contributed to the successful development and BIS certification submission of an indigenously designed 3.3 kW grid-tied solar inverter. Skilled in power electronics control, signal processing, embedded system optimization, Artificial Intelligence, Machine Learning, and Computer Vision. Holds a Ph.D. in Computer Science, combining expertise in intelligent algorithms and embedded systems to develop innovative, high-performance solutions for next-generation renewable energy and smart energy applications.",
   },
 ];
 
@@ -124,7 +124,7 @@ export default function TeamPage() {
                 <Reveal key={person.name} delay={i * 120}>
                   <div className="card-gradient grid h-full grid-cols-1 overflow-hidden rounded-2xl border border-slate-200 shadow-[0_20px_45px_-22px_rgba(33,17,66,0.38)] transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_28px_55px_-22px_rgba(194,65,12,0.45)] sm:grid-cols-[210px_1fr]">
                     {/* Image */}
-                    <div className="relative h-64 w-full overflow-hidden bg-slate-100 sm:h-full sm:min-h-[300px]">
+                    <div className="relative h-64 w-full overflow-hidden bg-slate-100 sm:h-full sm:min-h-75">
                       <Image
                         src={person.img}
                         alt={person.name}
