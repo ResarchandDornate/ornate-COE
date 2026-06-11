@@ -55,14 +55,15 @@ export default function About() {
           <div className="rounded-2xl border border-brand/20 bg-linear-to-br from-white via-[#f7fafe] to-[#e8f1fb] p-6 shadow-sm sm:rounded-3xl sm:p-8">
             <div className="text-center">
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-dark">
-                One indigenous power-conversion platform
+                One Unified Power-Conversion Solution Platform
               </span>
               <h3 className="mt-2 font-display text-lg font-bold text-navy-800 sm:text-2xl">
                 One reusable control core — five applications
               </h3>
               <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
-                Our work is not a single product. The same indigenous control architecture powers an
-                entire family of clean-energy power electronics.
+                Our innovation extends beyond a single product. A common
+                control architecture serves as the foundation for a diverse portfolio of clean-energy power electronics
+                solutions.
               </p>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
@@ -72,9 +73,8 @@ export default function About() {
                   className="group flex flex-col items-center rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"
                 >
                   <span
-                    className={`relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-linear-to-br text-white shadow-lg ring-1 ring-white/40 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 ${
-                      APP_TILES[i] ?? APP_TILES[0]
-                    }`}
+                    className={`relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-linear-to-br text-white shadow-lg ring-1 ring-white/40 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 ${APP_TILES[i] ?? APP_TILES[0]
+                      }`}
                   >
                     {/* glossy top highlight for the 4D look */}
                     <span className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-linear-to-b from-white/45 to-transparent" />
@@ -117,7 +117,7 @@ export default function About() {
                   <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-navy-700 to-navy-800 text-white shadow-lg shadow-navy-800/25 transition-transform duration-300 group-hover:scale-110">
                     <VisionIcon />
                   </span>
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy-600">
+                  <span className="text-[18px] font-semibold uppercase tracking-[0.22em] text-navy-600">
                     Vision
                   </span>
                 </div>
@@ -141,7 +141,7 @@ export default function About() {
                   <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-navy-600 to-navy-800 text-white shadow-lg shadow-navy-800/25 transition-transform duration-300 group-hover:scale-110">
                     <MissionIcon />
                   </span>
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy-600">
+                  <span className="text-[18px] font-semibold uppercase tracking-[0.22em] text-navy-600">
                     Mission
                   </span>
                 </div>

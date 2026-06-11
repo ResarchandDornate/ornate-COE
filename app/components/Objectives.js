@@ -17,8 +17,8 @@ export default function Objectives() {
     <section id="objectives" className="bg-[#f3f7fc] py-16 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
-          title="Our strategic commitments"
-          subtitle="Everything we build is anchored to these objectives — from sovereign R&D capability to world-class quality standards."
+          title="Our Strategic Commitments"
+          subtitle="Everything we build is guided by these core objectives — from strengthening in-house R&D capability to achieving world-class standards of quality and reliability."
         />
 
         <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">

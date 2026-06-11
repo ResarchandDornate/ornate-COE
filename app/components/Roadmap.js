@@ -20,8 +20,8 @@ export default function Roadmap() {
       <div className="mx-auto max-w-5xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Development Roadmap"
-          title="From proof-of-concept to commercialization"
-          subtitle="A phased model — building capability and complexity progressively across four milestones."
+          title="From Proof-of-Concept to Commercialization"
+          subtitle="A phased approach that progressively builds capability, scale, and system complexity across four milestones."
         />
 
         <div className="relative mt-16">

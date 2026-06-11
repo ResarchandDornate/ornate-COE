@@ -35,7 +35,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-5 pb-16 pt-36 sm:pb-24 sm:pt-44 lg:px-8">
             <Reveal className="text-center">
               <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white ring-1 ring-white/20 backdrop-blur-sm">
-                Research &amp; Development · Ornate
+                Research &amp; Development · Ornate Solar
               </span>
               <h1 className="mt-6 font-display text-5xl font-bold uppercase leading-[1.02] tracking-tight text-white sm:text-7xl lg:text-8xl">
                 Centre of <span className="text-gradient">Excellence</span>
@@ -66,10 +66,7 @@ export default function AboutPage() {
                   Power Electronics &amp; Clean Energy Systems · at Ornate Solar
                 </p>
                 <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-700">
-                  Researching, designing and commercialising advanced power electronics —
-                  inverters, solar pump controllers and clean energy systems — entirely through
-                  indigenous design, bridging academia and industry to power India&apos;s clean
-                  energy transformation.
+                  {"Driving India’s clean energy future by innovating, designing, and bringing to market advanced power electronics technologies, such as inverters, solar pump controllers, and sustainable energy systems, built entirely on expertise and strengthened by academia–industry collaboration."}
                 </p>
                 <div className="mt-7 flex flex-wrap gap-4">
                   <a
@@ -101,8 +98,8 @@ export default function AboutPage() {
                       className="aspect-4/5 w-full object-cover object-top"
                     />
                   </div>
-                  <p className="text-gradient mt-5 text-center font-display text-lg font-bold tracking-wide">
-                    Professor Bidyut Kumar
+                  <p className="text-gradient mt-5 text-center font-display text-xl font-bold tracking-wide">
+                    Prof. Bidyut Kumar Bhattacharyya
                   </p>
                 </div>
               </Reveal>

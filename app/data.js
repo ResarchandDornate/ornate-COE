@@ -33,43 +33,43 @@ export const MISSION =
 
 // The application areas the platform powers — shown in the Vision/Mission section.
 export const VM_APPLICATIONS = [
-  { name: "Solar inverters", desc: "Residential to utility scale" },
-  { name: "Battery storage (BESS)", desc: "Bi-directional power conversion" },
-  { name: "EV DC fast charging", desc: "Grid-tied, bi-directional" },
-  { name: "Microgrids & hybrid", desc: "Grid-forming control" },
-  { name: "Solid-state transformers", desc: "Next-generation grid hardware" },
+  { name: "Solar inverters", desc: "ResidentiGrid-Tied Inverters Residential to Utility Scale High Efficiency Scalable Architectureal to utility scale" },
+  { name: "Battery energy storage systems (BESS)", desc: "Bi-Directional Power Flow Backup Power Grid Support Smart Energy Control" },
+  { name: "EV DC fast charging", desc: "Fast EV Charging Electric Mobility Energy-Efficient Charging Rapid Charging Solutions" },
+  { name: "Microgrids & Hybrid Energy Systems", desc: "Reliable Power Supply Sustainable Infrastructure Energy Resilience Renewable Energy Optimization" },
+  { name: "Solid-state transformers", desc: "Next-Generation Energy Infrastructure Grid Flexibility Intelligent Power Conversion Smart Grid Infrastructure" },
 ];
 
 export const OBJECTIVES = [
   {
     no: "01",
-    title: "Indigenous R&D Leadership",
-    body: "Design and develop power electronics systems — inverters, controllers, converters — entirely in-house, reducing dependence on imported technology and building sovereign capability.",
+    title: "R&D Leadership",
+    body: "Design and develop power electronics systems—including inverters, controllers, and converters—entirely in-house, reducing dependence on imported technologies and strengthening national capability.",
   },
   {
     no: "02",
     title: "Scalable Product Development",
-    body: "Scale our proven 3 kW inverter design to 6 kW and 10 kW platforms, and commercialize the solar pump controller for agricultural and industrial use.",
+    body: "Extend our validated 3 kW inverter platform to 6 kW and 10 kW systems, and advance the commercialization of solar pump controllers for agricultural and industrial applications.",
   },
   {
     no: "03",
     title: "Clean Energy Democratization",
-    body: "Make high-quality solar and off-grid power systems accessible and affordable — targeting remote villages, farms, small enterprises, and underserved communities.",
+    body: "Enable affordable, high-quality solar and off-grid energy solutions for remote villages, farms, small businesses, and underserved communities.",
   },
   {
     no: "04",
-    title: "Talent & Skill Building",
-    body: "Create a pipeline of power electronics engineers through internships, research fellowships, and hands-on prototyping programmes within the center.",
+    title: "Talent & Skill Development",
+    body: "Build a strong pipeline of power electronics engineers through internships, research fellowships, and hands-on prototyping programs at the Centre.",
   },
   {
     no: "05",
-    title: "Industry-Academia Collaboration",
-    body: "Partner with universities, government bodies, and industry to co-develop standards, file patents, and bring research outcomes to real-world deployment.",
+    title: "Industry–Academia Collaboration",
+    body: "Work closely with universities, government agencies, and industry partners to co-develop standards, secure patents, and translate research into real-world deployment.",
   },
   {
     no: "06",
     title: "Quality & Reliability Standards",
-    body: "Build all products to exceed national and international standards — BIS, IEC, IEEE — ensuring every watt delivered is safe, efficient, and long-lasting.",
+    body: "Design and manufacture products that meet and exceed national and international standards (BIS, IEC, IEEE), ensuring safety, efficiency, and long-term reliability in every system delivered.",
   },
 ];
 
@@ -159,28 +159,28 @@ export const ROADMAP = [
     state: "Completed",
     tone: "done",
     title: "3 kW Inverter — Validated & Submitted for BIS",
-    body: "Concept, simulation, schematic, PCB layout, firmware and prototype testing completed in-house. The Swatantra Series 3 kW grid-tied inverter has been submitted to BIS for type-testing under IS 16221.",
+    body: "Concept design, simulation, schematic development, PCB layout, firmware, and prototype testing were completed in-house. The Swatantra Series 3 kW grid-tied inverter has been submitted for BIS certification.",
   },
   {
     phase: "Phase 2",
     state: "In Progress",
     tone: "progress",
     title: "6 kW Inverter & Solar Pump Controller",
-    body: "Scaling the proven architecture to 6 kW. The solar pump controller is in active hardware prototype stage with bench testing underway — both developed concurrently for agricultural and industrial applications.",
+    body: "Scaling the proven architecture to a 6 kW platform while simultaneously developing a solar pump controller. Both systems are currently in hardware prototyping and bench-testing stages, targeting agricultural and industrial applications.",
   },
   {
     phase: "Phase 3",
     state: "Planned",
     tone: "planned",
-    title: "10 kW Platform & Grid-Tie Capability",
-    body: "Development of the 10 kW inverter with full grid-tie synchronization, anti-islanding protection and export limiting. Target certifications: BIS IS 16221 and IEC 62109 for domestic and global market readiness.",
+    title: "10 kW Platform & Advanced Grid Integration",
+    body: "Development of a 10-kW inverter with full grid synchronization, anti-islanding protection, and export limiting features. Target certifications include relevant BIS and IEC standards, enabling readiness for both domestic and global markets.",
   },
   {
     phase: "Phase 4",
     state: "Planned",
     tone: "planned",
-    title: "Commercialization, IP Filing & Partnerships",
-    body: "Technology transfer to manufacturing partners, patent filing, MoUs with industry stakeholders, and pilot installations across agricultural and commercial sectors.",
+    title: "Commercialization, IP Creation & Strategic Partnerships",
+    body: "Patent filings have already been initiated and published, with additional filings planned as new innovations emerge. This phase includes technology transfer to manufacturing partners, MoUs with industry stakeholders, and pilot deployments across agricultural and commercial sectors.",
   },
 ];
 

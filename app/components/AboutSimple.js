@@ -5,14 +5,14 @@ import SectionHeading from "./SectionHeading";
 const POINTS = [
   {
     title: "We build the “brain” of solar power",
-    body: "Solar panels make DC electricity, but your home and the grid run on AC. An inverter converts one into the other. We design inverters that do this cleanly, safely and efficiently.",
+    body: "Solar panels generate DC electricity, while homes and the grid use AC power. An inverter converts this safely and efficiently. We design advanced inverters that make this conversion clean, reliable, and efficient.",
     icon: (
       <path d="M9 3h6l-1 7h4l-9 11 2-8H7l2-10Z" strokeLinejoin="round" strokeLinecap="round" />
     ),
   },
   {
-    title: "We make it ourselves, in India",
-    body: "From the circuit boards to the software, we design and engineer nearly everything in-house — instead of importing it — so the technology truly belongs to India.",
+    title: "We build it in India, for India",
+    body: "From hardware to software, most of our technology is designed and developed in-house instead of being imported—ensuring full ownership of the technology within India.",
     icon: (
       <>
         <path d="M3 21h18M5 21V8l7-5 7 5v13" strokeLinejoin="round" strokeLinecap="round" />
@@ -21,8 +21,8 @@ const POINTS = [
     ),
   },
   {
-    title: "One design powers many products",
-    body: "The same core technology can run a home inverter today, and tomorrow a large solar farm, an EV charger or a battery storage system. Build once, reuse everywhere.",
+    title: "One core design, many applications",
+    body: "A single underlying technology powers multiple systems—from home inverters today to solar plants, EV chargers, and battery storage systems tomorrow. Build once, deploy everywhere.",
     icon: (
       <>
         <rect x="3" y="3" width="7" height="7" rx="1.5" />
@@ -33,8 +33,8 @@ const POINTS = [
     ),
   },
   {
-    title: "Backed by experts & institutions",
-    body: "We are led by an IEEE Fellow and former Intel engineer, and we work with the IITs and government R&D bodies — so the work is world-class and trusted.",
+    title: "Backed by expertise and leading institutions",
+    body: "Our work is guided by deep technical expertise and collaboration with premier institutions such as the IITs and national R&D bodies, ensuring globally competitive and trusted innovation.",
     icon: (
       <>
         <path d="M12 3 4 6v6c0 4.5 3.4 7.5 8 9 4.6-1.5 8-4.5 8-9V6l-8-3Z" strokeLinejoin="round" />
@@ -50,8 +50,8 @@ export default function AboutSimple() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="In Simple Terms"
-          title="What we do — explained simply"
-          subtitle="No engineering background needed. Here is what the Centre does, and why it matters, in a few plain sentences."
+          title="What We Do — Explained Simply"
+          subtitle="No technical background needed. Here’s what the Centre does and why it matters, in straightforward language."
         />
 
         <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 sm:gap-6">
